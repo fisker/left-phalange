@@ -59,3 +59,9 @@ test(`pretty`, t => {
 }`
   )
 })
+
+test('should throw on non-exists file', t => {
+  t.throws(() => {
+    transformFile('fisker')
+  })
+})
