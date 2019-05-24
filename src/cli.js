@@ -57,14 +57,15 @@ function processor(
   if (file) {
     file = isAbsolute(file) ? file : join(process.cwd(), file)
     input.file = file
-  } else {
-    if (typeof inputType === 'undefined') {
-      input.type = 'json'
-    }
-    input.content = getStdin()
+    console.log(transform(input, output))
+
+    return
   }
 
-  console.log(transform(input, output))
+  getStdin().then(content => {
+    input.content = content
+    console.log(transform(input, output))
+  })
 }
 
 processor(cli.input[0], cli.flags)

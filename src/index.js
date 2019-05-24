@@ -4,7 +4,7 @@ import parse from './parse'
 import print from './print'
 
 function transform(input, output = {}) {
-  const {file, content, type} = input
+  const {file, content, type = 'json'} = input
 
   if (file && !existsSync(file)) {
     throw new Error(`file [${file}] not exists`)
