@@ -73,8 +73,5 @@
   },
   "ava": {
     "require": "esm"
-  },
-  "nyc": {
-    "require": "esm"
   }
 }
