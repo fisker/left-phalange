@@ -1,7 +1,7 @@
-import {dump} from 'js-yaml'
+import {safeDump} from 'js-yaml'
 
 function yamlPrinter(data, options) {
-  return dump(data)
+  return safeDump(data)
 }
 
 export default yamlPrinter

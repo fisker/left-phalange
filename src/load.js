@@ -1,26 +1,10 @@
 import {extname} from 'path'
 import * as loaders from './loader'
+import {getFileType} from './utils'
 
-const resolverByType = {
-  ...loaders,
-  cjs: loaders.esm,
-  json: loaders.esm,
-}
-
-const resolverByExtension = {
-  '.mjs': loaders.esm,
-  '.js': loaders.esm,
-  '.json': loaders.esm,
-  '.json5': loaders.json5,
-  '.yaml': loaders.yaml,
-  '.toml': loaders.toml,
-}
-
-function loadFile(file, format) {
-  const loader = format
-    ? resolverByType[format]
-    : resolverByExtension[extname(file)]
-  return loader(file)
+function loadFile(file, type) {
+  type = type || getFileType(file)
+  return loaders[type](file)
 }
 
 export default loadFile

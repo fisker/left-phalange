@@ -1,1 +1,1 @@
-export {load as default} from 'js-yaml'
+export {safeLoad as default} from 'js-yaml'
