@@ -2,10 +2,8 @@ import meow from 'meow'
 import updateNotifier from 'update-notifier'
 import colors from 'ansi-colors'
 import {join} from 'path'
-
-const esmRequire = require('esm')(module)
-
-updateNotifier({pkg: require('../package.json')}).notify()
+import load from './load'
+import print from './print'
 
 const cli = meow(
   `
@@ -15,6 +13,8 @@ const cli = meow(
 
   Options
     --pretty ${colors.cyan('pretty output')}
+    --input ${colors.cyan('input file type')}
+    --output ${colors.cyan('output file type')}
 
   Examples
     $ lp foo.js > foo.json
@@ -28,15 +28,12 @@ const cli = meow(
   }
 )
 
-function interopDefault(ex) {
-  return ex && typeof ex === 'object' && 'default' in ex ? ex.default : ex
+function processor(file, {pretty = false, input, output = 'json'} = {}) {
+  file = join(process.cwd(), file)
+  const data = load(file, input)
+  const result = print(data, output, {pretty})
+
+  console.log(result)
 }
 
-function print(file, {pretty = false} = {}) {
-  const data = interopDefault(esmRequire(join(process.cwd(), file)))
-  const string = JSON.stringify(data, null, pretty ? 2 : undefined)
-
-  console.log(string)
-}
-
-print(cli.input[0], cli.flags)
+processor(cli.input[0], cli.flags)
