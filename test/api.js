@@ -29,8 +29,9 @@ const results = {
   json: '{"fisker":"jerk"}',
   yaml: 'fisker: jerk',
   toml: 'fisker = "jerk"',
-  cjs: 'module.exports = {"fisker":"jerk"};',
-  esm: 'export default {"fisker":"jerk"};',
+  json5: "{fisker:'jerk'}",
+  cjs: "module.exports = {fisker:'jerk'};",
+  esm: "export default {fisker:'jerk'};",
 }
 
 for (const file of files) {

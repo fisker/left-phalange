@@ -1,8 +1,4 @@
-import jsonPrinter from './json'
+import json5Printer from './json5'
+import {wrap} from '../utils'
 
-function cjsPrinter(data, options) {
-  const jsonString = jsonPrinter(data, options)
-  return `module.exports = ${jsonString};`
-}
-
-export default cjsPrinter
+export default wrap(json5Printer, string => `module.exports = ${string};`)

@@ -1,8 +1,4 @@
-import jsonPrinter from './json'
+import json5Printer from './json5'
+import {wrap} from '../utils'
 
-function esmPrinter(data, options) {
-  const jsonString = jsonPrinter(data, options)
-  return `export default ${jsonString};`
-}
-
-export default esmPrinter
+export default wrap(json5Printer, string => `export default ${string};`)
