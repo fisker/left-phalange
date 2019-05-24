@@ -1,0 +1,65 @@
+{
+  "name": "left-phalange",
+  "version": "0.0.0",
+  "main": "index.js",
+  "repository": "fisker/left-phalange",
+  "author": {
+    "name": "fisker Cheung",
+    "email": "lionkay@gmail.com",
+    "url": "https://www.fiskercheung.com/"
+  },
+  "license": "MIT",
+  "files": [
+    "bin"
+  ],
+  "bin": {
+    "left-phalange": "bin/cli",
+    "lp": "bin/cli"
+  },
+  "dependencies": {
+    "ansi-colors": "^3.2.4",
+    "esm": "^3.2.25",
+    "meow": "^5.0.0",
+    "update-notifier": "^3.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog-emoji"
+    }
+  },
+  "scripts": {
+    "release": "run-s lint build prettier dist",
+    "lint": "run-p lint:*",
+    "lint:eslint": "eslint **/*.{js,mjs,vue} --fix",
+    "lint:markdown": "markdownlint **/*.md --ignore \"**/node_modules/**\"",
+    "dist": "run-p dist:*",
+    "dist:npm": "np --yolo --no-yarn",
+    "build": "run-p build:*",
+    "build:js": "rollup --config",
+    "prettier": "prettier **/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml} --write"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "sideEffects": false,
+  "devDependencies": {
+    "@commitlint/cli": "^7.6.1",
+    "@fisker/commitlint-config": "^1.0.8",
+    "@fisker/eslint-config": "^1.0.14",
+    "@fisker/husky-config": "^1.1.0",
+    "@fisker/lint-staged-config": "^1.0.4",
+    "@fisker/prettier-config": "^1.0.17",
+    "cz-conventional-changelog-emoji": "^0.1.0",
+    "eslint": "^5.16.0",
+    "husky": "^2.3.0",
+    "lint-staged": "^8.1.7",
+    "markdownlint-cli": "^0.16.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.17.1",
+    "rollup": "^1.12.3",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.0.0"
+  }
+}
