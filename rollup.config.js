@@ -3,12 +3,9 @@ import json from 'rollup-plugin-json'
 import filesize from 'rollup-plugin-filesize'
 import {dependencies} from './package.json'
 
-const plugins = [
-  cjs({
-    exclude: Object.keys(dependencies),
-  }),
-  json(),
-]
+const plugins = [cjs(), json(), filesize()]
+
+const external = ['path', 'fs', ...Object.keys(dependencies)]
 
 export default [
   {
@@ -17,6 +14,7 @@ export default [
       file: 'lib/index.js',
       format: 'cjs',
     },
+    external,
     plugins,
   },
   {
@@ -26,6 +24,7 @@ export default [
       format: 'cjs',
       banner: '#!/usr/bin/env node',
     },
+    external,
     plugins,
   },
 ]
