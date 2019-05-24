@@ -1,20 +1,23 @@
 import meow from 'meow'
 import updateNotifier from 'update-notifier'
 import colors from 'ansi-colors'
-import {join} from 'path'
-import load from './load'
-import print from './print'
+import {join, isAbsolute} from 'path'
+import {existsSync} from 'fs'
+import getStdin from 'get-stdin'
+import transform from '.'
+
+updateNotifier({pkg: require('../package.json')}).notify()
 
 const cli = meow(
   `
   Usage
-    $ left-phalange file
-    $ lp file
+    $ left-phalange <file>
+    $ lp <file>
 
   Options
-    --pretty ${colors.cyan('pretty output')}
-    --input ${colors.cyan('input file type')}
-    --output ${colors.cyan('output file type')}
+    --pretty, -p ${colors.cyan('pretty output')}
+    --input, -i ${colors.cyan('input file type')}
+    --output, -o ${colors.cyan('output file type')}
 
   Examples
     $ lp foo.js > foo.json
@@ -23,17 +26,42 @@ const cli = meow(
     flags: {
       pretty: {
         type: 'boolean',
+        default: false,
+        alias: 'r',
+      },
+      input: {
+        alias: 'i',
+      },
+      output: {
+        alias: 'o',
       },
     },
   }
 )
 
-function processor(file, {pretty = false, input, output = 'json'} = {}) {
-  file = join(process.cwd(), file)
-  const data = load(file, input)
-  const result = print(data, output, {pretty})
+function processor(
+  file,
+  {pretty = false, input: inputType, output: outputType = 'json'} = {}
+) {
+  const input = {
+    type: inputType,
+  }
 
-  console.log(result)
+  const output = {
+    type: outputType,
+  }
+
+  if (file) {
+    file = isAbsolute(file) ? file : join(process.cwd(), file)
+    input.file = file
+  } else {
+    if (typeof inputType === 'undefined') {
+      input.type = 'json'
+    }
+    input.content = getStdin()
+  }
+
+  console.log(transform(input, output))
 }
 
 processor(cli.input[0], cli.flags)

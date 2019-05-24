@@ -1,15 +1,24 @@
 import cjs from 'rollup-plugin-commonjs'
 import json from 'rollup-plugin-json'
+import filesize from 'rollup-plugin-filesize'
 import {dependencies} from './package.json'
 
+const plugins = [
+  cjs({
+    exclude: Object.keys(dependencies),
+  }),
+  json(),
+]
+
 export default [
-  // {
-  //   input: "src/index.js",
-  //   output: {
-  //     file: "lib/index.js",
-  //     format: "cjs"
-  //   }
-  // },
+  {
+    input: 'src/index.js',
+    output: {
+      file: 'lib/index.js',
+      format: 'cjs',
+    },
+    plugins,
+  },
   {
     input: 'src/cli.js',
     output: {
@@ -17,11 +26,6 @@ export default [
       format: 'cjs',
       banner: '#!/usr/bin/env node',
     },
-    plugins: [
-      cjs({
-        exclude: Object.keys(dependencies),
-      }),
-      json(),
-    ],
+    plugins,
   },
 ]

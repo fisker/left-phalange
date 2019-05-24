@@ -1,13 +1,7 @@
-import jsonPrinter from './printers/json'
-import yamlPrinter from './printers/yaml'
+import * as printers from './printer'
 
-const printers = {
-  json: jsonPrinter,
-  yaml: yamlPrinter,
-}
-
-function print(data, format = 'json', options = {}) {
-  return printers[format](data, options)
+function print(data, {type = 'json', ...options}) {
+  return printers[type](data, options)
 }
 
 export default print
