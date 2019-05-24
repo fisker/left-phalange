@@ -1,13 +1,16 @@
-import {parserToLoader} from '../utils'
+import {parserToLoader, wrap, interopDefault} from '../utils'
 import * as parsers from '../parser'
 
-import esm from './esm'
+import esmRequire from './esm-require'
+
+const esmLoader = wrap(esmRequire, interopDefault)
 
 const yaml = parserToLoader(parsers.yaml)
 const json5 = parserToLoader(parsers.json5)
 const toml = parserToLoader(parsers.toml)
-const js = esm
-const cjs = esm
-const json = esm
+const esm = esmLoader
+const js = esmLoader
+const cjs = esmRequire
+const json = esmRequire
 
 export {esm, yaml, json5, toml, js, cjs, json}
