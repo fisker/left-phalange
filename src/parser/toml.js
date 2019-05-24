@@ -1,1 +1,1 @@
-export {parse as default} from 'toml'
+export {parse as default} from '@iarna/toml'
