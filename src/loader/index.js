@@ -1,7 +1,7 @@
 import {parserToLoader} from '../utils'
-import esm from './esm'
-
 import * as parsers from '../parser'
+
+import esm from './esm'
 
 const yaml = parserToLoader(parsers.yaml)
 const json5 = parserToLoader(parsers.json5)
