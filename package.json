@@ -44,7 +44,7 @@
     "build:js": "rollup --config",
     "prettier": "prettier **/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml} --write",
     "test": "ava --verbose",
-    "test-coverage": "nyc --require esm yarn test"
+    "test-coverage": "nyc yarn test"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
@@ -72,6 +72,9 @@
     "rollup-plugin-node-resolve": "^5.0.0"
   },
   "ava": {
+    "require": "esm"
+  },
+  "nyc": {
     "require": "esm"
   }
 }

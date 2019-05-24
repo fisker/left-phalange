@@ -1,15 +1,11 @@
 import {parserToLoader} from '../utils'
 import esm from './esm'
 
-import {
-  yaml as yarmParser,
-  json5 as json5Parser,
-  toml as tomlParser,
-} from '../parser'
+import * as parsers from '../parser'
 
-const yaml = parserToLoader(yarmParser)
-const json5 = parserToLoader(json5Parser)
-const toml = parserToLoader(tomlParser)
+const yaml = parserToLoader(parsers.yaml)
+const json5 = parserToLoader(parsers.json5)
+const toml = parserToLoader(parsers.toml)
 const js = esm
 const cjs = esm
 const json = esm
