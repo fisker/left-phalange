@@ -88,3 +88,4 @@ typings/
 
 # project ignore files
 /bin
+/lib

@@ -1,4 +1,3 @@
-import {extname} from 'path'
 import * as loaders from './loader'
 import {getFileType} from './utils'
 

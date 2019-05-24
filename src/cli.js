@@ -2,7 +2,6 @@ import meow from 'meow'
 import updateNotifier from 'update-notifier'
 import colors from 'ansi-colors'
 import {join, isAbsolute} from 'path'
-import {existsSync} from 'fs'
 import getStdin from 'get-stdin'
 import transform from '.'
 
@@ -15,9 +14,12 @@ const cli = meow(
     $ lp <file>
 
   Options
-    --pretty, -p ${colors.cyan('pretty output')}
-    --input, -i ${colors.cyan('input file type')}
-    --output, -o ${colors.cyan('output file type')}
+    --pretty, -p
+      ${colors.cyan('pretty output')}
+    --input, -i
+      ${colors.cyan('input file type')}
+    --output, -o
+      ${colors.cyan('output file type')}
 
   Examples
     $ lp foo.js > foo.json
@@ -49,6 +51,7 @@ function processor(
 
   const output = {
     type: outputType,
+    pretty,
   }
 
   if (file) {

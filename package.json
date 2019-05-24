@@ -34,7 +34,7 @@
     }
   },
   "scripts": {
-    "release": "run-s lint build prettier dist",
+    "release": "run-s lint build prettier test dist",
     "lint": "run-p lint:*",
     "lint:eslint": "eslint **/*.{js,mjs,vue} --fix",
     "lint:markdown": "markdownlint **/*.md --ignore \"**/node_modules/**\"",
