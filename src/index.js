@@ -10,7 +10,7 @@ function transform(input, output = {}) {
     throw new Error(`file [${file}] not exists`)
   }
 
-  const data = file ? load(file, type) : parse(content, type || 'json')
+  const data = file ? load(file, type) : parse(content, type || 'yaml')
 
   return print(data, output)
 }
