@@ -14,28 +14,34 @@ const cli = meow(
     $ lp <file>
 
   Options
-    --pretty, -p
-      ${colors.cyan('pretty output')}
-    --input, -i
-      ${colors.cyan('input file type')}
-    --output, -o
-      ${colors.cyan('output file type')}
+    -i, --input           ${colors.cyan('Input file type')}
+    -o, --output          ${colors.cyan('Output file type')}
+    -p, --pretty          ${colors.cyan('Pretty output')}
+    -h, --help            ${colors.cyan('Show this help info')}
+    -v, --version         ${colors.cyan('Show version')}
 
   Examples
     $ lp foo.js > foo.json
+    $ cat foo.js | lp -p
 `,
   {
     flags: {
       pretty: {
         type: 'boolean',
         default: false,
-        alias: 'r',
+        alias: 'p',
       },
       input: {
         alias: 'i',
       },
       output: {
         alias: 'o',
+      },
+      help: {
+        alias: 'h',
+      },
+      version: {
+        alias: 'v',
       },
     },
   }
