@@ -9,8 +9,9 @@ cache: yarn
 before_install:
   - npm install --global nyc
 script:
-  - npm run build
-  - npm run test-coverage
+  - yarn build
+  - yarn test-coverage
+  - nyc yarn test
 after_script:
   - npm install --global codecov coveralls
   - nyc report --reporter=text-lcov | coveralls
