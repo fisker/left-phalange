@@ -3,6 +3,7 @@ import updateNotifier from 'update-notifier'
 import colors from 'ansi-colors'
 import {join, isAbsolute} from 'path'
 import getStdin from 'get-stdin'
+import {writeSync as copyToClipboard} from 'clipboardy'
 import transform from '.'
 
 updateNotifier({pkg: require('../package.json')}).notify()
@@ -17,6 +18,7 @@ const cli = meow(
     -i, --input           ${colors.cyan('Input file type')}
     -o, --output          ${colors.cyan('Output file type')}
     -p, --pretty          ${colors.cyan('Pretty output')}
+    -C, --copy            ${colors.cyan('Copy output to clipboard')}
     -h, --help            ${colors.cyan('Show this help info')}
     -v, --version         ${colors.cyan('Show version')}
 
@@ -37,6 +39,11 @@ const cli = meow(
       output: {
         alias: 'o',
       },
+      copy: {
+        type: 'boolean',
+        default: false,
+        alias: 'C',
+      },
       help: {
         alias: 'h',
       },
@@ -49,7 +56,12 @@ const cli = meow(
 
 function processor(
   file,
-  {pretty = false, input: inputType, output: outputType = 'json'} = {}
+  {
+    pretty = false,
+    input: inputType,
+    output: outputType = 'json',
+    copy = false,
+  } = {}
 ) {
   const input = {
     type: inputType,
@@ -63,15 +75,27 @@ function processor(
   if (file) {
     file = isAbsolute(file) ? file : join(process.cwd(), file)
     input.file = file
-    console.log(transform(input, output))
-
-    return
+    showResult(input, output, copy)
+  } else {
+    getStdin().then(content => {
+      if (content) {
+        input.content = content
+        showResult(input, output, copy)
+      } else {
+        cli.showHelp()
+      }
+    })
   }
+}
 
-  getStdin().then(content => {
-    input.content = content
-    console.log(transform(input, output))
-  })
+function showResult(input, output, copy) {
+  const result = transform(input, output)
+
+  if (copy) {
+    copyToClipboard(result)
+  } else {
+    console.log(result)
+  }
 }
 
 processor(cli.input[0], cli.flags)

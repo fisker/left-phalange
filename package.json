@@ -20,6 +20,7 @@
   "dependencies": {
     "@iarna/toml": "^2.2.3",
     "ansi-colors": "^3.2.4",
+    "clipboardy": "^2.0.0",
     "esm": "^3.2.25",
     "get-stdin": "^7.0.0",
     "js-yaml": "^3.13.1",
