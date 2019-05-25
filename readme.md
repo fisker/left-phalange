@@ -32,7 +32,7 @@ lp --help
     -v, --version         Show version
 
   Examples
-    $ lp data.toml > foo.json
+    $ lp data.toml > data.json
     $ cat data.yaml | lp -p
 ```
 

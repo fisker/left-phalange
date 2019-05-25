@@ -23,7 +23,7 @@ const cli = meow(
     -v, --version         ${colors.cyan('Show version')}
 
   Examples
-    $ lp data.toml > foo.json
+    $ lp data.toml > data.json
     $ cat data.yaml | lp -p
 `,
   {
