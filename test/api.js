@@ -32,6 +32,7 @@ const results = {
   json5: "{fisker:'jerk'}",
   cjs: "module.exports = {fisker:'jerk'};",
   esm: "export default {fisker:'jerk'};",
+  ini: 'fisker=jerk',
 }
 
 for (const file of files) {

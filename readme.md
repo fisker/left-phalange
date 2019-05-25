@@ -1,6 +1,6 @@
 # left-phalange
 
-> Convert data between ESModule, CommonJS, JSON, JSON5, YAML, TOML
+> Convert data between CommonJS, ESModule, INI, JSON, JSON5, TOML, YAML
 
 ## Install
 
@@ -42,6 +42,7 @@ lp --help
 
 - cjs (CommonJS, file only, not stdin)
 - esm (ESModule, file only, not stdin)
+- ini
 - js (CommonJS or ESModule, file only, not stdin)
 - json
 - json5
@@ -52,6 +53,7 @@ lp --help
 
 - cjs
 - esm
+- ini
 - json (default)
 - json5
 - toml
