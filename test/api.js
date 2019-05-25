@@ -25,7 +25,7 @@ function transformFileContent(file, output = {}) {
 }
 
 const files = readdirSync(join(__dirname, 'fixtures'))
-const INIT_LINE_FEED = process.platform === 'win32' ? '\r\n' : '\n'
+const INI_LINE_FEED = process.platform === 'win32' ? '\r\n' : '\n'
 const results = {
   json: '{"fisker":"jerk"}',
   yaml: `fisker: jerk
@@ -35,7 +35,7 @@ const results = {
   json5: "{fisker:'jerk'}",
   cjs: "module.exports = {fisker:'jerk'};",
   esm: "export default {fisker:'jerk'};",
-  ini: `fisker=jerk${INIT_LINE_FEED}`,
+  ini: `fisker=jerk${INI_LINE_FEED}`,
 }
 
 const prettyResults = {
@@ -55,7 +55,7 @@ const prettyResults = {
   esm: `export default {
   fisker: 'jerk',
 };`,
-  ini: `fisker = jerk${INIT_LINE_FEED}`,
+  ini: `fisker = jerk${INI_LINE_FEED}`,
 }
 
 for (const file of files) {
