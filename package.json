@@ -1,8 +1,8 @@
 {
   "name": "left-phalange",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert data between ESModule, CommonJS, JSON, JSON5, YAML, TOML",
-  "main": "index.js",
+  "main": "lib/index.js",
   "repository": "fisker/left-phalange",
   "author": {
     "name": "fisker Cheung",
@@ -18,7 +18,6 @@
     "left-phalange": "bin/cli",
     "lp": "bin/cli"
   },
-  "main": "lib/index.js",
   "dependencies": {
     "@iarna/toml": "^2.2.3",
     "ansi-colors": "^3.2.4",
