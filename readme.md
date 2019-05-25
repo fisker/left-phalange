@@ -26,8 +26,8 @@ lp --help
     -v, --version         Show version
 
   Examples
-    $ lp foo.js > foo.json
-    $ cat foo.js | lp -p
+    $ lp data.toml > foo.json
+    $ cat data.yaml | lp -p
 ```
 
 ## License
