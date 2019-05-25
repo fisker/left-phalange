@@ -40,22 +40,22 @@ lp --help
 
 ### input
 
-- esm (file only, not stdin)
-- js (file only, not stdin)
-- cjs (file only, not stdin)
+- cjs (CommonJS, file only, not stdin)
+- esm (ESModule, file only, not stdin)
+- js (CommonJS or ESModule, file only, not stdin)
 - json
 - json5
-- yaml (default value for stdin, YAML is superset of json, so it should work for JSON as well)
 - toml
+- yaml (default value for Stdin, `YAML` is superset of `JSON`, so it should work for `JSON` as well)
 
 ### output
 
-- esm
 - cjs
+- esm
 - json (default)
 - json5
-- yaml
 - toml
+- yaml
 
 ## License
 
