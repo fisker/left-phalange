@@ -8,6 +8,12 @@
 npm install --global left-phalange
 ```
 
+## Quick start
+
+```sh
+curl -L https://unpkg.com/left-phalange/package.json | lp -o toml
+```
+
 ## Usage
 
 ```text
@@ -18,8 +24,8 @@ lp --help
     $ lp <file>
 
   Options
-    -i, --input           Input file type
-    -o, --output          Output file type
+    -i, --input           Input Data type
+    -o, --output          Output Data type
     -p, --pretty          Pretty output
     -C, --copy            Copy output to clipboard
     -h, --help            Show this help info
@@ -29,6 +35,27 @@ lp --help
     $ lp data.toml > foo.json
     $ cat data.yaml | lp -p
 ```
+
+## Options
+
+### input
+
+- esm (file only, not stdin)
+- js (file only, not stdin)
+- cjs (file only, not stdin)
+- json
+- json5
+- yaml (default value for stdin, YAML is superset of json, so it should work for JSON as well)
+- toml
+
+### output
+
+- esm
+- cjs
+- json (default)
+- json5
+- yaml
+- toml
 
 ## License
 

@@ -15,8 +15,8 @@ const cli = meow(
     $ lp <file>
 
   Options
-    -i, --input           ${colors.cyan('Input file type')}
-    -o, --output          ${colors.cyan('Output file type')}
+    -i, --input           ${colors.cyan('Input Data type')}
+    -o, --output          ${colors.cyan('Output Data type')}
     -p, --pretty          ${colors.cyan('Pretty output')}
     -C, --copy            ${colors.cyan('Copy output to clipboard')}
     -h, --help            ${colors.cyan('Show this help info')}
