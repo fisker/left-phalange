@@ -47,6 +47,26 @@ for (const file of files.filter(file => extname(file).slice(1) in parsers)) {
   })
 }
 
+test(`CONTENT: without input type should tread as yaml`, t => {
+  t.is(
+    transform({
+      content: `{"fisker":"jerk"}`,
+    }),
+    results.json
+  )
+})
+
+test(`CONTENT: without input type should throws`, t => {
+  t.throws(() => {
+    transform({
+      content: `
+[scope]
+fisker = "jerk"
+`,
+    })
+  })
+})
+
 for (const [type, result] of Object.entries(results)) {
   test(`Output as ${type}`, t => {
     t.is(transformFile('json.json', {type}).trim(), result.trim())
