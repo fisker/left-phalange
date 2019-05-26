@@ -38,6 +38,7 @@
     "js-yaml": "^3.13.1",
     "json5": "^2.1.0",
     "meow": "^5.0.0",
+    "parse-json": "^4.0.0",
     "rollup-plugin-filesize": "^6.1.0",
     "update-notifier": "^3.0.0"
   },

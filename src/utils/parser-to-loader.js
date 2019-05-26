@@ -1,10 +1,10 @@
 import {readFileSync} from 'fs'
 
 function parserToLoader(parser) {
-  return function loader(file) {
-    const content = readFileSync(file)
+  return function loader(filename) {
+    const content = readFileSync(filename)
 
-    return parser(content)
+    return parser(content, {filename})
   }
 }
 
