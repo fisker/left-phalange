@@ -14,4 +14,4 @@ script:
 after_script:
   - npm install --global codecov coveralls
   - nyc report --reporter=text-lcov | coveralls
-  - cat ./coverage/lcov.info | codecov
+  - nyc report --reporter=text-lcov | codecov

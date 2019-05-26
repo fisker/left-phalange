@@ -1,13 +1,23 @@
 {
   "name": "left-phalange",
-  "version": "0.0.10",
-  "main": "index.js",
+  "version": "1.0.2",
+  "description": "Convert data between CommonJS, ESModule, INI, JSON, JSON5, TOML, YAML",
+  "main": "lib/index.js",
   "repository": "fisker/left-phalange",
   "author": {
     "name": "fisker Cheung",
     "email": "lionkay@gmail.com",
     "url": "https://www.fiskercheung.com/"
   },
+  "keywords": [
+    "data",
+    "convert",
+    "json",
+    "yaml",
+    "json5",
+    "toml",
+    "ini"
+  ],
   "license": "MIT",
   "files": [
     "bin",
@@ -20,9 +30,11 @@
   "dependencies": {
     "@iarna/toml": "^2.2.3",
     "ansi-colors": "^3.2.4",
+    "clipboardy": "^2.0.0",
     "esm": "^3.2.25",
     "get-stdin": "^7.0.0",
     "import-fresh": "^3.0.0",
+    "ini": "^1.3.5",
     "js-yaml": "^3.13.1",
     "json5": "^2.1.0",
     "meow": "^5.0.0",

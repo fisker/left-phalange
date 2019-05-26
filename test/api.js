@@ -25,13 +25,37 @@ function transformFileContent(file, output = {}) {
 }
 
 const files = readdirSync(join(__dirname, 'fixtures'))
+const INI_LINE_FEED = process.platform === 'win32' ? '\r\n' : '\n'
 const results = {
   json: '{"fisker":"jerk"}',
-  yaml: 'fisker: jerk',
-  toml: 'fisker = "jerk"',
+  yaml: `fisker: jerk
+`,
+  toml: `fisker = "jerk"
+`,
   json5: "{fisker:'jerk'}",
   cjs: "module.exports = {fisker:'jerk'};",
   esm: "export default {fisker:'jerk'};",
+  ini: `fisker=jerk${INI_LINE_FEED}`,
+}
+
+const prettyResults = {
+  json: `{
+  "fisker": "jerk"
+}`,
+  yaml: `fisker: jerk
+`,
+  toml: `fisker = "jerk"
+`,
+  json5: `{
+  fisker: 'jerk',
+}`,
+  cjs: `module.exports = {
+  fisker: 'jerk',
+};`,
+  esm: `export default {
+  fisker: 'jerk',
+};`,
+  ini: `fisker = jerk${INI_LINE_FEED}`,
 }
 
 for (const file of files) {
@@ -48,17 +72,34 @@ for (const file of files.filter(file => extname(file).slice(1) in parsers)) {
 
 for (const [type, result] of Object.entries(results)) {
   test(`Output as ${type}`, t => {
-    t.is(transformFile('json.json', {type}).trim(), result.trim())
+    t.is(transformFile('json.json', {type}), result)
   })
 }
 
-test(`pretty`, t => {
+for (const [type, result] of Object.entries(prettyResults)) {
+  test(`pretty: ${type}`, t => {
+    t.is(transformFile('json.json', {type, pretty: true}), result)
+  })
+}
+
+test(`CONTENT: without input type should tread as yaml`, t => {
   t.is(
-    transformFile('json.json', {pretty: true}),
-    `{
-  "fisker": "jerk"
-}`
+    transform({
+      content: `{"fisker":"jerk"}`,
+    }),
+    results.json
   )
+})
+
+test(`CONTENT: without input type should throws`, t => {
+  t.throws(() => {
+    transform({
+      content: `
+[scope]
+fisker = "jerk"
+`,
+    })
+  })
 })
 
 test('should throw on non-exists file', t => {
