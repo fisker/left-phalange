@@ -1,6 +1,6 @@
 {
   "name": "left-phalange",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Convert data between CommonJS, ESModule, INI, JSON, JSON5, TOML, YAML",
   "main": "lib/index.js",
   "repository": "fisker/left-phalange",
