@@ -22,6 +22,7 @@
     "ansi-colors": "^3.2.4",
     "esm": "^3.2.25",
     "get-stdin": "^7.0.0",
+    "import-fresh": "^3.0.0",
     "js-yaml": "^3.13.1",
     "json5": "^2.1.0",
     "meow": "^5.0.0",
