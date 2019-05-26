@@ -1,6 +1,6 @@
 import * as parsers from './parser'
 
-function parse(content, type) {
+function parse(content, type = 'yaml') {
   return parsers[type](content)
 }
 

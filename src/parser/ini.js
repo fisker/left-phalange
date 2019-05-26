@@ -1,6 +1,6 @@
 import {decode} from 'ini'
 
-function iniParser(content) {
+function iniParser(content, options) {
   return decode(String(content))
 }
 

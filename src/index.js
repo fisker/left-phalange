@@ -1,18 +1,13 @@
-import {existsSync} from 'fs'
 import load from './load'
 import parse from './parse'
-import print from './print'
+import stringify from './stringify'
 
 function transform(input, output = {}) {
   const {file, content, type} = input
 
-  if (file && !existsSync(file)) {
-    throw new Error(`file [${file}] not exists`)
-  }
+  const data = file ? load(file, type) : parse(content, type)
 
-  const data = file ? load(file, type) : parse(content, type || 'yaml')
-
-  return print(data, output)
+  return stringify(data, output)
 }
 
 export default transform
