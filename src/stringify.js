@@ -1,7 +1,10 @@
-import * as printers from './printer'
+import {stringify} from 'left-phalange-api'
 
-function stringify(data, {type = 'json', ...options}) {
-  return printers[type](data, options)
+function stringifyData(data, {output, pretty} = {}) {
+  return stringify(data, {
+    type: output,
+    pretty,
+  })
 }
 
-export default stringify
+export default stringifyData

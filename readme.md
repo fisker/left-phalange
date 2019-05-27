@@ -59,6 +59,10 @@ lp --help
 - toml
 - yaml
 
+## Related
+
+- [left-phalange-api](https://github.com/fisker/left-phalange-api) - API for this module
+
 ## License
 
 MIT © [fisker Cheung](https://github.com/fisker)

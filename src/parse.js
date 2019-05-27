@@ -1,7 +1,9 @@
-import * as parsers from './parser'
+import {parse} from 'left-phalange-api'
 
-function parse(content, type = 'yaml') {
-  return parsers[type](content)
+function parseData(content, {input} = {}) {
+  return parse(content, {
+    type: input,
+  })
 }
 
-export default parse
+export default parseData

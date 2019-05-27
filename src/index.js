@@ -1,13 +1,28 @@
+import getStdin from 'get-stdin'
+import cli from './cli'
 import load from './load'
-import parse from './parse'
 import stringify from './stringify'
+import parse from './parse'
+import showResult from './show-result'
+import update from './update'
 
-function transform(input, output = {}) {
-  const {file, content, type} = input
+update()
 
-  const data = file ? load(file, type) : parse(content, type)
+const file = cli.input[0]
+const {flags} = cli
 
-  return stringify(data, output)
+if (file) {
+  const data = load(file, flags)
+  const result = stringify(data, flags)
+  showResult(result, flags)
+} else {
+  getStdin().then(content => {
+    if (content) {
+      const data = parse(content, flags)
+      const result = stringify(data, flags)
+      showResult(result, flags)
+    } else {
+      cli.showHelp()
+    }
+  })
 }
-
-export default transform

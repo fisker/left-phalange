@@ -1,9 +1,12 @@
-import * as loaders from './loader'
-import {getFileType} from './utils'
+import {join, isAbsolute} from 'path'
+import {load} from 'left-phalange-api'
 
-function loadFile(file, type) {
-  type = type || getFileType(file)
-  return loaders[type](file)
+function loadFileData(file, {input} = {}) {
+  file = isAbsolute(file) ? file : join(process.cwd(), file)
+  const data = load(file, {
+    type: input,
+  })
+  return data
 }
 
-export default loadFile
+export default loadFileData
