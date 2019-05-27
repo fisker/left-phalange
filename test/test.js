@@ -4,6 +4,10 @@ import {readSync as readClipboard} from 'clipboardy'
 
 const packageJson = require('../package.json')
 
+execa.shellSync('chmod +x ../bin/cli', {
+  cwd: __dirname,
+})
+
 function run({file, stdin, flags = {}}) {
   const arguments_ = Object.entries(flags)
     .reduce(
