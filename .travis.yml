@@ -11,6 +11,7 @@ node_js:
 sudo: false
 cache: yarn
 before_install:
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt install xsel fi
   - npm install --global nyc
 script:
   - yarn build
