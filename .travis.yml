@@ -8,10 +8,7 @@ node_js:
   - '8'
   - '10'
   - '12'
-jobs:
-  include:
-    - os: windows
-      filter_secrets: false
+filter_secrets: false
 cache: yarn
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then export DISPLAY=:99.0; fi
