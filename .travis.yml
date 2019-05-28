@@ -22,7 +22,7 @@ before_install:
 script:
   - yarn build
   - yarn test-coverage
-# after_script:
-#   - npm install --global codecov coveralls
-#   - nyc report --reporter=text-lcov | coveralls
-#   - nyc report --reporter=text-lcov | codecov
+after_script:
+  - npm install --global codecov coveralls
+  - nyc report --reporter=text-lcov | coveralls
+  - nyc report --reporter=text-lcov | codecov

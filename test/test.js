@@ -22,7 +22,7 @@ function run({file, stdin, flags = {}}) {
     )
     .filter(Boolean)
 
-  return execa.sync('../bin/cli', arguments_, {
+  return execa.sync('node', ['-r', 'esm', '../src/index', ...arguments_], {
     cwd: __dirname,
     input: stdin,
   })
