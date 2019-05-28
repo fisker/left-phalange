@@ -18,7 +18,7 @@ before_install:
 script:
   - yarn build
   - yarn test-coverage
-after_script:
-  - npm install --global codecov coveralls
-  - if [[ "$TRAVIS_OS_NAME" != "windows" ]]; then nyc report --reporter=text-lcov | coveralls; fi
-  - if [[ "$TRAVIS_OS_NAME" != "windows" ]]; then nyc report --reporter=text-lcov | codecov; fi
+# after_script:
+#   - npm install --global codecov coveralls
+#   - nyc report --reporter=text-lcov | coveralls
+#   - nyc report --reporter=text-lcov | codecov
