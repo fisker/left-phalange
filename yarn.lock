@@ -3225,10 +3225,10 @@ latest-version@^5.0.0:
   dependencies:
     package-json "^6.3.0"
 
-left-phalange-api@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.npmjs.org/left-phalange-api/-/left-phalange-api-1.1.1.tgz#d6419da77a400657bf0b889353d358221a312d2e"
-  integrity sha512-yDrGO+joekU6v+FUQZCer7jt+mS1SIftUPZ72cDkYTG2JDjfGwK1n6gOiJxi6tT8vFPtgE4FiQMUET/12PZ76A==
+left-phalange-api@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/left-phalange-api/-/left-phalange-api-1.1.4.tgz#05208d3daca05e188e188b9007ecfd4423b4268d"
+  integrity sha512-ggLNQ9HdZql9Hy0OZrLBTAm1tjkwq0n+CzRHpdVhatp2XeXEUcqtuSie6C9OTMXdBKbg4gdSItTjmBLuHwp8PQ==
   dependencies:
     "@iarna/toml" "^2.2.3"
     ansi-colors "^3.2.4"
