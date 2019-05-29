@@ -78,8 +78,9 @@ test('Should print as TOML', t => {
 })
 
 test('Should copy to clipboard', t => {
-  writeClipboard('noop')
-  t.is(readClipboard(), 'noop')
+  const time = new Date().toISOString()
+  writeClipboard(time)
+  t.is(readClipboard(), time)
 
   const result = run({
     file: '../package.json',
