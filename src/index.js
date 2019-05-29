@@ -6,23 +6,35 @@ import parse from './parse'
 import showResult from './show-result'
 import update from './update'
 
-update()
+async function getData() {
+  const {input, flags} = cli
 
-const file = cli.input[0]
-const {flags} = cli
+  const content = await getStdin()
 
-if (file) {
-  const data = load(file, flags)
-  const result = stringify(data, flags)
-  showResult(result, flags)
-} else {
-  getStdin().then(content => {
-    if (content) {
-      const data = parse(content, flags)
-      const result = stringify(data, flags)
-      showResult(result, flags)
-    } else {
-      cli.showHelp()
-    }
-  })
+  if (content) {
+    return parse(content, flags)
+  }
+
+  const [file] = input
+
+  if (file) {
+    return load(file, flags)
+  }
+
+  return false
 }
+
+async function main() {
+  const data = await getData()
+
+  if (data === false) {
+    return cli.showHelp()
+  }
+
+  const {flags} = cli
+  const result = stringify(data, flags)
+  return showResult(result, flags)
+}
+
+update()
+main()

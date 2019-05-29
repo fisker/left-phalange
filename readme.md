@@ -2,16 +2,16 @@
 
 > Convert data between CommonJS, ESModule, INI, JSON, JSON5, TOML, YAML
 
+## Quick Overview
+
+```sh
+echo left="phalange" | npx left-phalange --input toml --pretty
+```
+
 ## Install
 
 ```sh
 npm install --global left-phalange
-```
-
-## Quick start
-
-```sh
-curl -L https://unpkg.com/left-phalange/package.json | lp -o toml
 ```
 
 ## Usage
