@@ -28,7 +28,7 @@ function run({file, stdin, flags = {}}) {
   })
 }
 
-test('file', t => {
+test('Should print json file', t => {
   const result = run({
     file: '../package.json',
   })
@@ -36,7 +36,7 @@ test('file', t => {
   t.is(result.stdout, JSON.stringify(packageJson))
 })
 
-test('stdin', t => {
+test('Should accept stdin', t => {
   const result = run({
     stdin: '{"left": "phalange"}',
   })
@@ -44,7 +44,7 @@ test('stdin', t => {
   t.is(result.stdout, '{"left":"phalange"}')
 })
 
-test('flags.pretty', t => {
+test('Should print pretty', t => {
   const result = run({
     file: '../package.json',
     flags: {
@@ -55,7 +55,7 @@ test('flags.pretty', t => {
   t.is(result.stdout, JSON.stringify(packageJson, null, 2))
 })
 
-test('flags.input', t => {
+test('Should accept TOML', t => {
   const result = run({
     stdin: 'left= "phalange"',
     flags: {
@@ -66,7 +66,7 @@ test('flags.input', t => {
   t.is(result.stdout, '{"left":"phalange"}')
 })
 
-test('flags.output', t => {
+test('Should print as TOML', t => {
   const result = run({
     stdin: '{"left": "phalange"}',
     flags: {
@@ -77,7 +77,7 @@ test('flags.output', t => {
   t.is(result.stdout, 'left = "phalange"\n')
 })
 
-test('flags.copy', t => {
+test('Should copy to clipboard', t => {
   const result = run({
     file: '../package.json',
     flags: {
@@ -89,7 +89,13 @@ test('flags.copy', t => {
   t.is(readClipboard(), JSON.stringify(packageJson))
 })
 
-test(`should throw on parse error`, t => {
+test('Should show help when no input', t => {
+  const result = run({})
+
+  t.true(result.stdout.includes('Examples'))
+})
+
+test('Should throw on parse error', t => {
   t.throws(() => {
     run({
       file: __filename,
@@ -97,7 +103,7 @@ test(`should throw on parse error`, t => {
   })
 })
 
-test('should throw on non-exists file', t => {
+test('Should throw on non-exists file', t => {
   t.throws(() => {
     run({
       file: 'left.phalange',

@@ -8,7 +8,7 @@ async function main(cli) {
   const data = await input(cli)
 
   if (typeof data === 'undefined') {
-    return cli.showHelp()
+    return cli.showHelp(0)
   }
 
   const result = output(cli, data)
