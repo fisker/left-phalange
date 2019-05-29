@@ -1,40 +1,26 @@
-import getStdin from 'get-stdin'
+import {writeSync as copyToClipboard} from 'clipboardy'
 import cli from './cli'
-import load from './load'
-import stringify from './stringify'
-import parse from './parse'
-import showResult from './show-result'
 import update from './update'
+import input from './input'
+import output from './output'
 
-async function getData() {
-  const {input, flags} = cli
+async function main(cli) {
+  const data = await input(cli)
 
-  const content = await getStdin()
-
-  if (content) {
-    return parse(content, flags)
-  }
-
-  const [file] = input
-
-  if (file) {
-    return load(file, flags)
-  }
-
-  return false
-}
-
-async function main() {
-  const data = await getData()
-
-  if (data === false) {
+  if (typeof data === 'undefined') {
     return cli.showHelp()
   }
 
-  const {flags} = cli
-  const result = stringify(data, flags)
-  return showResult(result, flags)
+  const result = output(cli, data)
+
+  const {copy} = cli.flags
+
+  if (copy) {
+    copyToClipboard(result)
+  } else {
+    console.log(result)
+  }
 }
 
 update()
-main()
+main(cli)

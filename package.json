@@ -30,7 +30,7 @@
     "ansi-colors": "^3.2.4",
     "clipboardy": "^2.0.0",
     "get-stdin": "^7.0.0",
-    "left-phalange-api": "^1.1.1",
+    "left-phalange-api": "^1.1.4",
     "meow": "^5.0.0",
     "update-notifier": "^3.0.0"
   },
