@@ -6,61 +6,59 @@
 strategy:
   matrix:
     node_8_x:
-      imageName: 'ubuntu-16.04'
+      imageName: "ubuntu-16.04"
       node_version: 8.x
     node_10_x:
-      imageName: 'ubuntu-16.04'
+      imageName: "ubuntu-16.04"
       node_version: 10.x
     node_12_x:
-      imageName: 'ubuntu-16.04'
+      imageName: "ubuntu-16.04"
       node_version: 12.x
     mac:
-      imageName: 'macOS-10.14'
+      imageName: "macOS-10.14"
       node_version: 12.x
     windows:
-      imageName: 'windows-2019'
+      imageName: "windows-2019"
       node_version: 12.x
 
 trigger:
-- master
+  - master
 
 pool:
   vmImage: $(imageName)
 
 steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: $(node_version)
-    checkLatest: true
-  displayName: 'Install Node.js'
+  - task: NodeTool@0
+    inputs:
+      versionSpec: $(node_version)
+      checkLatest: true
+    displayName: "Install Node.js"
 
-- script: |
-    yarn
-  displayName: 'Yarn install'
+  - script: |
+      yarn
+    displayName: "Yarn install"
 
-- script: |
-    yarn build
-  displayName: 'Yarn build'
+  - script: |
+      yarn build
+    displayName: "Yarn build"
 
-- script: |
-    npm install --global nyc
-  displayName: 'Install nyc'
+  - script: |
+      npm install --global nyc
+    displayName: "Install nyc"
 
-- script: |
-    export DISPLAY=:99.0
-    sh -e /etc/init.d/xvfb start
-    sleep 3
-    yarn test-coverage
-  condition: eq( variables['Agent.OS'], 'Linux' )
-  displayName: 'test-coverage(Linux)'
+  - script: |
+      Xvfb :99 &
+      export DISPLAY=:99
+      sleep 3 # give xvfb some time to start
+    condition: eq( variables['Agent.OS'], 'Linux' )
+    displayName: "Linux Setup"
 
-- script: |
-    yarn test-coverage
-  condition: ne( variables['Agent.OS'], 'Linux' )
-  displayName: 'test-coverage(Windows and MaC)'
+  - script: |
+      yarn test-coverage
+    displayName: "test-coverage"
 
-- script: |
-   npm install --global codecov coveralls
-   nyc report --reporter=text-lcov | coveralls
-   nyc report --reporter=text-lcov | codecov
-  displayName: 'report-coverage'
+  - script: |
+      npm install --global codecov coveralls
+      nyc report --reporter=text-lcov | coveralls
+      nyc report --reporter=text-lcov | codecov
+    displayName: "report-coverage"
