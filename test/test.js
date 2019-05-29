@@ -1,6 +1,6 @@
 import test from 'ava'
 import execa from 'execa'
-import {readSync as readClipboard} from 'clipboardy'
+import {writeSync as writeClipboard,readSync as readClipboard} from 'clipboardy'
 
 const packageJson = require('../package.json')
 
@@ -78,13 +78,15 @@ test('Should print as TOML', t => {
 })
 
 test('Should copy to clipboard', t => {
+  writeClipboard('noop')
+  t.is(readClipboard(), 'noop')
+
   const result = run({
     file: '../package.json',
     flags: {
       copy: true,
     },
   })
-
   t.is(result.stdout, '')
   t.is(readClipboard(), JSON.stringify(packageJson))
 })
