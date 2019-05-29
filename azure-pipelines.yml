@@ -59,6 +59,7 @@ steps:
     displayName: "test-coverage"
     env:
       DISPLAY: :10 # Only necessary for linux tests
+      YARN_GPG: no # windows
 
   - script: |
       npm install --global codecov coveralls
