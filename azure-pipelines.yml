@@ -35,6 +35,11 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
+  - if [[ "$AGENT_OS" == "linux" ]]; then export DISPLAY=:99.0; fi
+  - if [[ "$AGENT_OS" == "linux" ]]; then sh -e /etc/init.d/xvfb start; sleep 3; fi
+  displayName: 'Linux setup'
+
+- script: |
     yarn
   displayName: 'Yarn install'
 
