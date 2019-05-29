@@ -3,24 +3,35 @@
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
+strategy:
+  matrix:
+    node_8_x:
+      imageName: 'ubuntu-16.04'
+      node_version: 8.x
+    node_10_x:
+      imageName: 'ubuntu-16.04'
+      node_version: 10.x
+    node_12_x:
+      imageName: 'ubuntu-16.04'
+      node_version: 12.x
+    mac:
+      imageName: 'macOS-10.14'
+      node_version: 12.x
+    windows:
+      imageName: 'windows-2019'
+      node_version: 12.x
+
 trigger:
 - master
 
 pool:
-  vmImage: 'win1803'
-strategy:
-  matrix:
-    node_8_x:
-      node_version: 8.x
-    node_10_x:
-      node_version: 10.x
-    node_12_x:
-      node_version: 12.x
+  vmImage: $(imageName)
 
 steps:
 - task: NodeTool@0
   inputs:
     versionSpec: $(node_version)
+    checkLatest: true
   displayName: 'Install Node.js'
 
 - script: |
@@ -29,14 +40,10 @@ steps:
 
 - script: |
     yarn build
-  displayName: 'build'
-
+  displayName: 'Yarn build'
 
 - script: |
     npm install --global nyc
-  displayName: 'install nyc'
-
-- script: |
     yarn test-coverage
   displayName: 'test-coverage'
 
