@@ -58,7 +58,7 @@
   },
   "sideEffects": false,
   "devDependencies": {
-    "@commitlint/cli": "^7.6.1",
+    "@commitlint/cli": "^8.0.0",
     "@fisker/commitlint-config": "^1.0.8",
     "@fisker/eslint-config": "^1.0.14",
     "@fisker/eslint-config-ava": "^1.0.1",
