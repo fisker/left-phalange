@@ -9,9 +9,9 @@ os:
 language: node_js
 node_js:
   - 'lts/*'
-  - '8'
-  - '10'
-  - '12'
+  # - '8'
+  # - '10'
+  # - '12'
 filter_secrets: false
 cache: yarn
 before_install:

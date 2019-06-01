@@ -82,6 +82,9 @@
     "rollup-plugin-node-resolve": "^5.0.1"
   },
   "ava": {
-    "require": "esm"
+    "require": "esm",
+    "helpers": [
+      "test/helpers/**/*"
+    ]
   }
 }
