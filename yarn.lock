@@ -423,10 +423,10 @@
   dependencies:
     eslint-plugin-ava "^7.1.0"
 
-"@fisker/eslint-config@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@fisker/eslint-config/-/eslint-config-1.1.0.tgz#bcb046d6979f35321b8c0c220b36edcb35e1a4ef"
-  integrity sha512-ZP9KBkSfYZxg18+nn4PH3A+tyfO/KpRalE/E10xn4nybIcqlJRMj6GUpZFZrL9lJVLagtYAQiGzZMYNy+iHO1w==
+"@fisker/eslint-config@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@fisker/eslint-config/-/eslint-config-1.1.1.tgz#19c04d7166515233fb8b6078449f51906ade87c1"
+  integrity sha512-AtufcWlBhosVHbe63cN6faM3oZMsUKzy+Llsjj17VL6GdhEfSq5/goPrbXq6qgQTYNc1zwpmalTOpa5RYIEHuA==
   dependencies:
     eslint-config-airbnb-base "^13.1.0"
     eslint-config-prettier "^4.3.0"
@@ -436,7 +436,7 @@
     eslint-plugin-node "^9.1.0"
     eslint-plugin-prettier "^3.1.0"
     eslint-plugin-promise "^4.1.1"
-    eslint-plugin-unicorn "^9.0.0"
+    eslint-plugin-unicorn "^9.1.0"
 
 "@fisker/husky-config@^1.1.0":
   version "1.1.0"
@@ -1980,7 +1980,7 @@ eslint-plugin-promise@^4.1.1:
   resolved "https://registry.npmjs.org/eslint-plugin-promise/-/eslint-plugin-promise-4.1.1.tgz#1e08cb68b5b2cd8839f8d5864c796f56d82746db"
   integrity sha512-faAHw7uzlNPy7b45J1guyjazw28M+7gJokKUjC5JSFoYfUEyy6Gw/i7YQvmv2Yk00sUjWcmzXQLpU1Ki/C2IZQ==
 
-eslint-plugin-unicorn@^9.0.0:
+eslint-plugin-unicorn@^9.1.0:
   version "9.1.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-unicorn/-/eslint-plugin-unicorn-9.1.0.tgz#b5ec3c65ae28d8163f6f6b340b183e11862ec295"
   integrity sha512-OknjtY1daSxHd60KsXBxP9d2LExA3JZ2XuPOtqSZbLjwGaKjZXYMCaPI2xg70Qc791rXoi0pW4UEzVCnwlRi+Q==
