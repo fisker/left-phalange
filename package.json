@@ -42,7 +42,7 @@
   "scripts": {
     "release": "run-s lint build format test dist",
     "lint": "run-p lint:*",
-    "lint:eslint": "eslint **/*.{js,mjs,vue}",
+    "lint:eslint": "eslint \"**/*.{js,mjs,vue}\"",
     "lint:markdown": "markdownlint **/*.md --ignore \"**/node_modules/**\"",
     "dist": "run-p dist:*",
     "dist:npm": "np --yolo --no-yarn",
@@ -52,7 +52,7 @@
     "test-coverage": "nyc yarn test",
     "format": "run-p format:*",
     "format:eslint": "yarn lint:eslint --fix",
-    "format:prettier": "prettier **/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml} --write"
+    "format:prettier": "prettier \"**/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml}\" --write"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
