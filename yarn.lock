@@ -423,13 +423,13 @@
   dependencies:
     eslint-plugin-ava "^7.1.0"
 
-"@fisker/eslint-config@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@fisker/eslint-config/-/eslint-config-1.1.1.tgz#19c04d7166515233fb8b6078449f51906ade87c1"
-  integrity sha512-AtufcWlBhosVHbe63cN6faM3oZMsUKzy+Llsjj17VL6GdhEfSq5/goPrbXq6qgQTYNc1zwpmalTOpa5RYIEHuA==
+"@fisker/eslint-config@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@fisker/eslint-config/-/eslint-config-1.1.2.tgz#ab78b7d3137032c022851d3603d086e77e15e977"
+  integrity sha512-388OaJ4ANcORsLORtwxv+ObpAs0uJd+wutlAxXgKMjDXbWTUVLTjzAxZQDhMFtvVJ9N3I1aLzh/G4BpmzV45pg==
   dependencies:
     eslint-config-airbnb-base "^13.1.0"
-    eslint-config-prettier "^4.3.0"
+    eslint-config-prettier "^5.0.0"
     eslint-plugin-eslint-comments "^3.1.1"
     eslint-plugin-html "^5.0.5"
     eslint-plugin-import "^2.17.3"
@@ -1886,10 +1886,10 @@ eslint-config-airbnb-base@^13.1.0:
     object.assign "^4.1.0"
     object.entries "^1.0.4"
 
-eslint-config-prettier@^4.3.0:
-  version "4.3.0"
-  resolved "https://registry.npmjs.org/eslint-config-prettier/-/eslint-config-prettier-4.3.0.tgz#c55c1fcac8ce4518aeb77906984e134d9eb5a4f0"
-  integrity sha512-sZwhSTHVVz78+kYD3t5pCWSYEdVSBR0PXnwjDRsUs8ytIrK8PLXw+6FKp8r3Z7rx4ZszdetWlXYKOHoUrrwPlA==
+eslint-config-prettier@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-5.0.0.tgz#f7a94b2b8ae7cbf25842c36fa96c6d32cd0a697c"
+  integrity sha512-c17Aqiz5e8LEqoc/QPmYnaxQFAHTx2KlCZBPxXXjEMmNchOLnV/7j0HoPZuC+rL/tDC9bazUYOKJW9bOhftI/w==
   dependencies:
     get-stdin "^6.0.0"
 
