@@ -1,6 +1,9 @@
 import test from 'ava'
 import execa from 'execa'
-import {writeSync as writeClipboard,readSync as readClipboard} from 'clipboardy'
+import {
+  writeSync as writeClipboard,
+  readSync as readClipboard,
+} from 'clipboardy'
 
 const packageJson = require('../package.json')
 
