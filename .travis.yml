@@ -8,7 +8,7 @@ os:
   - windows
 language: node_js
 node_js:
-  - 'lts/*'
+  - "lts/*"
   # - '8'
   # - '10'
   # - '12'
@@ -19,6 +19,7 @@ before_install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sh -e /etc/init.d/xvfb start; sleep 3; fi
   - npm install --global nyc
 script:
+  - yarn lint
   - yarn build
   - yarn test-coverage
 after_script:

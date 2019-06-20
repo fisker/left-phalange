@@ -40,17 +40,19 @@
     }
   },
   "scripts": {
-    "release": "run-s lint build prettier test dist",
+    "release": "run-s lint build format test dist",
     "lint": "run-p lint:*",
-    "lint:eslint": "eslint **/*.{js,mjs,vue} --fix",
+    "lint:eslint": "eslint **/*.{js,mjs,vue}",
     "lint:markdown": "markdownlint **/*.md --ignore \"**/node_modules/**\"",
     "dist": "run-p dist:*",
     "dist:npm": "np --yolo --no-yarn",
     "build": "run-p build:*",
     "build:js": "rollup --config",
-    "prettier": "prettier **/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml} --write",
     "test": "ava --verbose",
-    "test-coverage": "nyc yarn test"
+    "test-coverage": "nyc yarn test",
+    "format": "run-p format:*",
+    "format:eslint": "yarn lint:eslint --fix",
+    "format:prettier": "prettier **/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml} --write"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
