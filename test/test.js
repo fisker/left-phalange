@@ -91,7 +91,7 @@ test('Should copy to clipboard', t => {
       copy: true,
     },
   })
-  t.is(result.stdout, '')
+  t.is(result.stdout, 'copied')
   t.is(readClipboard(), JSON.stringify(packageJson))
 })
 

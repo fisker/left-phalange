@@ -17,6 +17,7 @@ async function main(cli) {
 
   if (copy) {
     copyToClipboard(result)
+    console.log('copied')
   } else {
     console.log(result)
   }
