@@ -69,7 +69,7 @@
     "@fisker/prettier-config": "^1.0.17",
     "ava": "^2.1.0",
     "cz-conventional-changelog-emoji": "^0.1.0",
-    "eslint": "^5.16.0",
+    "eslint": "^6.0.0",
     "esm": "^3.2.25",
     "execa": "^1.0.0",
     "husky": "^2.4.1",
