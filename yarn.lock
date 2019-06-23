@@ -416,12 +416,12 @@
   dependencies:
     "@commitlint/config-conventional" "8.0.0"
 
-"@fisker/eslint-config-ava@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@fisker/eslint-config-ava/-/eslint-config-ava-1.1.1.tgz#79fa1cad6598e7d990fa017dc196a0edc3425fef"
-  integrity sha512-bx3yOfdqi8RsZ6VoujC21rJLpQyLj+I4LLAyDkVRHkyMSPtW8+JgyYIkrUB8/Uhmq0QR/9fzz3riBIKQlGzkzQ==
+"@fisker/eslint-config-ava@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@fisker/eslint-config-ava/-/eslint-config-ava-1.2.0.tgz#087b1e65df4eec68b1afe3c1832c9a5dd971af62"
+  integrity sha512-mS+IQmRvoQUyerHZhz3yNIA5LJtWhln5uwF1a0YkwIFC6fN4+BYFW98ERyjlH2d/i1Pl5XfQGJGqyKybSW+PhA==
   dependencies:
-    eslint-plugin-ava "^7.1.0"
+    eslint-plugin-ava "7.1.0"
 
 "@fisker/eslint-config@^1.2.0":
   version "1.2.0"
@@ -1909,7 +1909,7 @@ eslint-module-utils@^2.4.0:
     debug "^2.6.8"
     pkg-dir "^2.0.0"
 
-eslint-plugin-ava@^7.1.0:
+eslint-plugin-ava@7.1.0:
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-ava/-/eslint-plugin-ava-7.1.0.tgz#ad2965c8a2b41e1d5e1c9477330ac9faa357b171"
   integrity sha512-Z/vWPuHxtqMzxLZKhY/BJPrpPwA6uDlYekpBafyy95ssJCRDKUlFh0bk+P8fPPQJjXYr7bYp3Hwn66/QLwTBUA==
