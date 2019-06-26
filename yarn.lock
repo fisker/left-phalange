@@ -272,10 +272,10 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
-"@commitlint/cli@^8.0.0":
+"@commitlint/cli@8.0.0":
   version "8.0.0"
-  resolved "https://registry.yarnpkg.com/@commitlint/cli/-/cli-8.0.0.tgz#1be7aa14fecbcf71317a8187fbb5210760d4ca61"
-  integrity sha512-wFu+g9v73I2rMRTv27ItIbcrhWqge0ZpUNUIJ9fw8TF7XpmhaUFvGqa2kU6st1F0TyEOrq5ZMzwI8kQZNVLuXg==
+  resolved "https://registry.npm.taobao.org/@commitlint/cli/download/@commitlint/cli-8.0.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40commitlint%2Fcli%2Fdownload%2F%40commitlint%2Fcli-8.0.0.tgz#1be7aa14fecbcf71317a8187fbb5210760d4ca61"
+  integrity sha1-G+eqFP7Lz3ExeoGH+7UhB2DUymE=
   dependencies:
     "@commitlint/format" "^8.0.0"
     "@commitlint/lint" "^8.0.0"
@@ -409,24 +409,24 @@
   dependencies:
     arrify "^1.0.1"
 
-"@fisker/commitlint-config@^1.1.0":
+"@fisker/commitlint-config@1.1.0":
   version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@fisker/commitlint-config/-/commitlint-config-1.1.0.tgz#e58fd2a66282f9bef3ba258a8f11442a89b11cd5"
-  integrity sha512-X1A7wde0cbvsFesjfjEJ4sSFtKOZLlGEqnGPDcaEfxzlg1nNMfG5f+iJPCuynDCY8gpRz13quYkHUmR2nCB2TQ==
+  resolved "https://registry.npm.taobao.org/@fisker/commitlint-config/download/@fisker/commitlint-config-1.1.0.tgz#e58fd2a66282f9bef3ba258a8f11442a89b11cd5"
+  integrity sha1-5Y/SpmKC+b7zuiWKjxFEKomxHNU=
   dependencies:
     "@commitlint/config-conventional" "8.0.0"
 
-"@fisker/eslint-config-ava@^1.2.0":
+"@fisker/eslint-config-ava@1.2.0":
   version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@fisker/eslint-config-ava/-/eslint-config-ava-1.2.0.tgz#087b1e65df4eec68b1afe3c1832c9a5dd971af62"
-  integrity sha512-mS+IQmRvoQUyerHZhz3yNIA5LJtWhln5uwF1a0YkwIFC6fN4+BYFW98ERyjlH2d/i1Pl5XfQGJGqyKybSW+PhA==
+  resolved "https://registry.npm.taobao.org/@fisker/eslint-config-ava/download/@fisker/eslint-config-ava-1.2.0.tgz#087b1e65df4eec68b1afe3c1832c9a5dd971af62"
+  integrity sha1-CHseZd9O7Gixr+PBgyyaXdlxr2I=
   dependencies:
     eslint-plugin-ava "7.1.0"
 
-"@fisker/eslint-config@^1.2.3":
+"@fisker/eslint-config@1.2.3":
   version "1.2.3"
-  resolved "https://registry.yarnpkg.com/@fisker/eslint-config/-/eslint-config-1.2.3.tgz#099ce178bb846d65353dee371f9ef55b2181641f"
-  integrity sha512-aTHoqBRqXvrYkUhdwpfgsZmzETFMFFlqzJLHab0reeS5Wr8T4+L9IkrJPhkJUZUyVdfLadFBr9VQvm7U84NBHw==
+  resolved "https://registry.npm.taobao.org/@fisker/eslint-config/download/@fisker/eslint-config-1.2.3.tgz#099ce178bb846d65353dee371f9ef55b2181641f"
+  integrity sha1-CZzheLuEbWU1Pe43H571WyGBZB8=
   dependencies:
     eslint-config-airbnb-base "13.1.0"
     eslint-config-prettier "5.0.0"
@@ -438,20 +438,20 @@
     eslint-plugin-promise "4.1.1"
     eslint-plugin-unicorn "9.1.1"
 
-"@fisker/husky-config@^1.1.0":
+"@fisker/husky-config@1.1.0":
   version "1.1.0"
-  resolved "https://registry.npmjs.org/@fisker/husky-config/-/husky-config-1.1.0.tgz#6edc5a2bf43a53ed7002d6eb3c0d14bc8c06ca69"
-  integrity sha512-znJ4sTCPAk3p8zvhAVSnax5mBAzk3FVb0SK30TUKHKYU7fOdqTMOB8PIH4bu4GskinX6GOwBiueXe9/SmCVMGQ==
+  resolved "https://registry.npm.taobao.org/@fisker/husky-config/download/@fisker/husky-config-1.1.0.tgz#6edc5a2bf43a53ed7002d6eb3c0d14bc8c06ca69"
+  integrity sha1-btxaK/Q6U+1wAtbrPA0UvIwGymk=
 
-"@fisker/lint-staged-config@^1.0.4":
+"@fisker/lint-staged-config@1.0.4":
   version "1.0.4"
-  resolved "https://registry.npmjs.org/@fisker/lint-staged-config/-/lint-staged-config-1.0.4.tgz#08206dd7ce02fccce83939fcf21ba2b774b5be36"
-  integrity sha512-hzNU3DPo8SKCWKN4ew/6GZugxl2qihN6jOjQv3yvtOE1u+W2rXS8Wxjdoh4Nia4ggdEIqkNkWcGr8KzjzpFhEA==
+  resolved "https://registry.npm.taobao.org/@fisker/lint-staged-config/download/@fisker/lint-staged-config-1.0.4.tgz#08206dd7ce02fccce83939fcf21ba2b774b5be36"
+  integrity sha1-CCBt184C/MzoOTn88huit3S1vjY=
 
-"@fisker/prettier-config@^1.0.17":
+"@fisker/prettier-config@1.0.17":
   version "1.0.17"
-  resolved "https://registry.npmjs.org/@fisker/prettier-config/-/prettier-config-1.0.17.tgz#1980baacb4627294859bbf60063e1796411e98c6"
-  integrity sha512-ZHKC92XMr8QGyfu/jWszmZvugCMDundpMs6t5wsIxX7d5H4oA1D3cmOUw4c/bQv9hEnxG6K1uX826YDc51TKww==
+  resolved "https://registry.npm.taobao.org/@fisker/prettier-config/download/@fisker/prettier-config-1.0.17.tgz#1980baacb4627294859bbf60063e1796411e98c6"
+  integrity sha1-GYC6rLRicpSFm79gBj4XlkEemMY=
 
 "@iarna/toml@^2.2.3":
   version "2.2.3"
@@ -575,15 +575,15 @@ ansi-align@^3.0.0:
   dependencies:
     string-width "^3.0.0"
 
+ansi-colors@4.0.1:
+  version "4.0.1"
+  resolved "https://registry.npm.taobao.org/ansi-colors/download/ansi-colors-4.0.1.tgz#3dc29301836c6152f617a71466bde162a2e42582"
+  integrity sha1-PcKTAYNsYVL2F6cUZr3hYqLkJYI=
+
 ansi-colors@^3.2.4:
   version "3.2.4"
   resolved "https://registry.npmjs.org/ansi-colors/-/ansi-colors-3.2.4.tgz#e3a3da4bfbae6c86a9c285625de124a234026fbf"
   integrity sha512-hHUXGagefjN2iRrID63xckIvotOXOojhQKWIPUZ4mNUZ9nLZW+7FMNoE1lOkEhNWYsx/7ysGIuJYCiMAA9FnrA==
-
-ansi-colors@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/ansi-colors/-/ansi-colors-4.0.1.tgz#3dc29301836c6152f617a71466bde162a2e42582"
-  integrity sha512-1Qs1jdXEMSYwcVooLRfnCc5+e3365pw38v4AVkSsCxsjXRGKDTem5VLCl53SpHSpLnEy8O5DofJHZJELaRiJbg==
 
 ansi-escapes@^3.0.0, ansi-escapes@^3.2.0:
   version "3.2.0"
@@ -774,10 +774,10 @@ atob@^2.1.1:
   resolved "https://registry.npmjs.org/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-ava@^2.1.0:
+ava@2.1.0:
   version "2.1.0"
-  resolved "https://registry.yarnpkg.com/ava/-/ava-2.1.0.tgz#158c5cdf48d1556caf0a9fdf96b61af9e566c153"
-  integrity sha512-IaS+l1KfYtFpJlDZXrNG0M6SGr/DUvwJmTiaTaW2lMdEezCAJc5J/hNAQWIKigkmxIOURYT29atD/qyp+zq+wg==
+  resolved "https://registry.npm.taobao.org/ava/download/ava-2.1.0.tgz#158c5cdf48d1556caf0a9fdf96b61af9e566c153"
+  integrity sha1-FYxc30jRVWyvCp/flrYa+eVmwVM=
   dependencies:
     "@ava/babel-preset-stage-4" "^3.0.0"
     "@ava/babel-preset-transform-test-files" "^5.0.0"
@@ -1255,10 +1255,10 @@ cli-width@^2.0.0:
   resolved "https://registry.yarnpkg.com/cli-width/-/cli-width-2.2.0.tgz#ff19ede8a9a5e579324147b0c11f0fbcbabed639"
   integrity sha1-/xnt6Kml5XkyQUewwR8PvLq+1jk=
 
-clipboardy@^2.1.0:
+clipboardy@2.1.0:
   version "2.1.0"
-  resolved "https://registry.yarnpkg.com/clipboardy/-/clipboardy-2.1.0.tgz#0123a0c8fac92f256dc56335e0bb8be97a4909a5"
-  integrity sha512-2pzOUxWcLlXWtn+Jd6js3o12TysNOOVes/aQfg+MT/35vrxWzedHlLwyoJpXjsFKWm95BTNEcMGD9+a7mKzZkQ==
+  resolved "https://registry.npm.taobao.org/clipboardy/download/clipboardy-2.1.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fclipboardy%2Fdownload%2Fclipboardy-2.1.0.tgz#0123a0c8fac92f256dc56335e0bb8be97a4909a5"
+  integrity sha1-ASOgyPrJLyVtxWM14LuL6XpJCaU=
   dependencies:
     arch "^2.1.1"
     execa "^1.0.0"
@@ -1501,9 +1501,9 @@ currently-unhandled@^0.4.1:
   dependencies:
     array-find-index "^1.0.1"
 
-cz-conventional-changelog-emoji@^0.1.0:
+cz-conventional-changelog-emoji@0.1.0:
   version "0.1.0"
-  resolved "https://registry.npmjs.org/cz-conventional-changelog-emoji/-/cz-conventional-changelog-emoji-0.1.0.tgz#8eadd1798b8e3e1bd1568de8577107988c97efff"
+  resolved "https://registry.npm.taobao.org/cz-conventional-changelog-emoji/download/cz-conventional-changelog-emoji-0.1.0.tgz#8eadd1798b8e3e1bd1568de8577107988c97efff"
   integrity sha1-jq3ReYuOPhvRVo3oV3EHmIyX7/8=
   dependencies:
     conventional-commit-types-emoji "^0.1.0"
@@ -2027,10 +2027,10 @@ eslint-visitor-keys@^1.0.0:
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#3f3180fb2e291017716acb4c9d6d5b5c34a6a81d"
   integrity sha512-qzm/XxIbxm/FHyH341ZrbnMUpe+5Bocte9xkmFMzPMjRaZMcXww+MpBptFvtU+79L362nqiLhekCxCxDPaUMBQ==
 
-eslint@^6.0.1:
+eslint@6.0.1:
   version "6.0.1"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-6.0.1.tgz#4a32181d72cb999d6f54151df7d337131f81cda7"
-  integrity sha512-DyQRaMmORQ+JsWShYsSg4OPTjY56u1nCjAmICrE8vLWqyLKxhFXOthwMj1SA8xwfrv0CofLNVnqbfyhwCkaO0w==
+  resolved "https://registry.npm.taobao.org/eslint/download/eslint-6.0.1.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Feslint%2Fdownload%2Feslint-6.0.1.tgz#4a32181d72cb999d6f54151df7d337131f81cda7"
+  integrity sha1-SjIYHXLLmZ1vVBUd99M3Ex+Bzac=
   dependencies:
     "@babel/code-frame" "^7.0.0"
     ajv "^6.10.0"
@@ -2069,7 +2069,7 @@ eslint@^6.0.1:
     table "^5.2.3"
     text-table "^0.2.0"
 
-esm@^3.2.25:
+esm@3.2.25, esm@^3.2.25:
   version "3.2.25"
   resolved "https://registry.npmjs.org/esm/-/esm-3.2.25.tgz#342c18c29d56157688ba5ce31f8431fbb795cc10"
   integrity sha512-U1suiZ2oDVWv4zPO56S0NcR5QriEahGtdN2OR6FiOG4WJvcjBVFB0qI4+eKoWFH483PKGuLuu6V8Z4T5g63UVA==
@@ -2148,6 +2148,20 @@ esutils@^2.0.2:
   resolved "https://registry.npmjs.org/esutils/-/esutils-2.0.2.tgz#0abf4f1caa5bcb1f7a9d8acc6dea4faaa04bac9b"
   integrity sha1-Cr9PHKpbyx96nYrMbepPqqBLrJs=
 
+execa@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npm.taobao.org/execa/download/execa-2.0.0.tgz?cache=0&sync_timestamp=1561462020819&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fexeca%2Fdownload%2Fexeca-2.0.0.tgz#5524c9739710e603e97c6dfc3f6ff6bff2819885"
+  integrity sha1-VSTJc5cQ5gPpfG38P2/2v/KBmIU=
+  dependencies:
+    cross-spawn "^6.0.5"
+    get-stream "^5.0.0"
+    is-stream "^2.0.0"
+    merge-stream "^2.0.0"
+    npm-run-path "^3.0.0"
+    p-finally "^2.0.0"
+    signal-exit "^3.0.2"
+    strip-final-newline "^2.0.0"
+
 execa@^0.7.0:
   version "0.7.0"
   resolved "https://registry.npmjs.org/execa/-/execa-0.7.0.tgz#944becd34cc41ee32a63a9faf27ad5a65fc59777"
@@ -2173,20 +2187,6 @@ execa@^1.0.0:
     p-finally "^1.0.0"
     signal-exit "^3.0.0"
     strip-eof "^1.0.0"
-
-execa@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/execa/-/execa-2.0.0.tgz#5524c9739710e603e97c6dfc3f6ff6bff2819885"
-  integrity sha512-+ym7S09yUVPHEhYBsdLm53ZjCmCSeAQVtM/iN9dDj9tbvcBnCeBXTXHPWR9HXzht+vslGROteM8bSUdr4YszUg==
-  dependencies:
-    cross-spawn "^6.0.5"
-    get-stream "^5.0.0"
-    is-stream "^2.0.0"
-    merge-stream "^2.0.0"
-    npm-run-path "^3.0.0"
-    p-finally "^2.0.0"
-    signal-exit "^3.0.2"
-    strip-final-newline "^2.0.0"
 
 expand-brackets@^2.1.4:
   version "2.1.4"
@@ -2693,10 +2693,10 @@ http-cache-semantics@^4.0.0:
   resolved "https://registry.yarnpkg.com/http-cache-semantics/-/http-cache-semantics-4.0.3.tgz#495704773277eeef6e43f9ab2c2c7d259dda25c5"
   integrity sha512-TcIMG3qeVLgDr1TEd2XvHaTnMPwYQUQMIBLy+5pLSDKYFc7UIqj39w8EGzZkaxoLv/l2K8HaI0t5AVA+YYgUew==
 
-husky@^2.5.0:
+husky@2.5.0:
   version "2.5.0"
-  resolved "https://registry.yarnpkg.com/husky/-/husky-2.5.0.tgz#fe9839e118e5d88e3f1d7121d52564745615815e"
-  integrity sha512-/aQIBaVMuzGi5X5BPliDPbHE+G+HDpWV7Zu28DiiXFMvHQcOeTsEnODWIGKyGBp7GM7rOgkxQdF+6AEo6xNtkw==
+  resolved "https://registry.npm.taobao.org/husky/download/husky-2.5.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fhusky%2Fdownload%2Fhusky-2.5.0.tgz#fe9839e118e5d88e3f1d7121d52564745615815e"
+  integrity sha1-/pg54Rjl2I4/HXEh1SVkdFYVgV4=
   dependencies:
     cosmiconfig "^5.2.1"
     execa "^1.0.0"
@@ -3277,10 +3277,10 @@ latest-version@^5.0.0:
   dependencies:
     package-json "^6.3.0"
 
-left-phalange-api@^1.1.4:
+left-phalange-api@1.1.4:
   version "1.1.4"
-  resolved "https://registry.npmjs.org/left-phalange-api/-/left-phalange-api-1.1.4.tgz#05208d3daca05e188e188b9007ecfd4423b4268d"
-  integrity sha512-ggLNQ9HdZql9Hy0OZrLBTAm1tjkwq0n+CzRHpdVhatp2XeXEUcqtuSie6C9OTMXdBKbg4gdSItTjmBLuHwp8PQ==
+  resolved "https://registry.npm.taobao.org/left-phalange-api/download/left-phalange-api-1.1.4.tgz#05208d3daca05e188e188b9007ecfd4423b4268d"
+  integrity sha1-BSCNPaygXhiOGIuQB+z9RCO0Jo0=
   dependencies:
     "@iarna/toml" "^2.2.3"
     ansi-colors "^3.2.4"
@@ -3306,10 +3306,10 @@ linkify-it@^2.0.0:
   dependencies:
     uc.micro "^1.0.1"
 
-lint-staged@^8.2.1:
+lint-staged@8.2.1:
   version "8.2.1"
-  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-8.2.1.tgz#752fcf222d9d28f323a3b80f1e668f3654ff221f"
-  integrity sha512-n0tDGR/rTCgQNwXnUf/eWIpPNddGWxC32ANTNYsj2k02iZb7Cz5ox2tytwBu+2r0zDXMEMKw7Y9OD/qsav561A==
+  resolved "https://registry.npm.taobao.org/lint-staged/download/lint-staged-8.2.1.tgz#752fcf222d9d28f323a3b80f1e668f3654ff221f"
+  integrity sha1-dS/PIi2dKPMjo7gPHmaPNlT/Ih8=
   dependencies:
     chalk "^2.3.1"
     commander "^2.14.1"
@@ -3650,10 +3650,10 @@ markdown-it@8.4.2:
     mdurl "^1.0.1"
     uc.micro "^1.0.5"
 
-markdownlint-cli@^0.17.0:
+markdownlint-cli@0.17.0:
   version "0.17.0"
-  resolved "https://registry.yarnpkg.com/markdownlint-cli/-/markdownlint-cli-0.17.0.tgz#f5e483a576bf56cca29b057216241a54d33e4d95"
-  integrity sha512-/MInVAuNUDGj5lWeAweL2s4Wk0BY2UqOUcOuOMhY62LXmQZU9qZiFJ5XgHrAZVMggFH/vPupCiUiAMFgGIOqHg==
+  resolved "https://registry.npm.taobao.org/markdownlint-cli/download/markdownlint-cli-0.17.0.tgz#f5e483a576bf56cca29b057216241a54d33e4d95"
+  integrity sha1-9eSDpXa/VsyimwVyFiQaVNM+TZU=
   dependencies:
     commander "~2.9.0"
     deep-extend "~0.5.1"
@@ -3924,10 +3924,10 @@ npm-path@^2.0.2:
   dependencies:
     which "^1.2.10"
 
-npm-run-all@^4.1.5:
+npm-run-all@4.1.5:
   version "4.1.5"
-  resolved "https://registry.npmjs.org/npm-run-all/-/npm-run-all-4.1.5.tgz#04476202a15ee0e2e214080861bff12a51d98fba"
-  integrity sha512-Oo82gJDAVcaMdi3nuoKFavkIHBRVqQ1qvMb+9LHk/cF4P6B2m8aP04hGf7oL6wZ9BuGwX1onlLhpuoofSyoQDQ==
+  resolved "https://registry.npm.taobao.org/npm-run-all/download/npm-run-all-4.1.5.tgz#04476202a15ee0e2e214080861bff12a51d98fba"
+  integrity sha1-BEdiAqFe4OLiFAgIYb/xKlHZj7o=
   dependencies:
     ansi-styles "^3.2.1"
     chalk "^2.4.1"
@@ -4388,10 +4388,10 @@ prettier-linter-helpers@^1.0.0:
   dependencies:
     fast-diff "^1.1.2"
 
-prettier@^1.18.2:
+prettier@1.18.2:
   version "1.18.2"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.18.2.tgz#6823e7c5900017b4bd3acf46fe9ac4b4d7bda9ea"
-  integrity sha512-OeHeMc0JhFE9idD4ZdtNibzY0+TPHSpSSb9h8FqtP+YnoZZ1sl8Vc9b1sasjfymH3SonAF4QcA2+mzHPhMvIiw==
+  resolved "https://registry.npm.taobao.org/prettier/download/prettier-1.18.2.tgz#6823e7c5900017b4bd3acf46fe9ac4b4d7bda9ea"
+  integrity sha1-aCPnxZAAF7S9Os9G/prEtNe9qeo=
 
 pretty-ms@^5.0.0:
   version "5.0.0"
@@ -4741,10 +4741,10 @@ rimraf@2.6.3, rimraf@^2.2.8, rimraf@^2.5.2, rimraf@^2.6.3:
   dependencies:
     glob "^7.1.3"
 
-rollup-plugin-commonjs@^10.0.0:
+rollup-plugin-commonjs@10.0.0:
   version "10.0.0"
-  resolved "https://registry.npmjs.org/rollup-plugin-commonjs/-/rollup-plugin-commonjs-10.0.0.tgz#58901ebe7ca44c2a03f0056de9bf9eb4a2dc8990"
-  integrity sha512-B8MoX5GRpj3kW4+YaFO/di2JsZkBxNjVmZ9LWjUoTAjq8N9wc7HObMXPsrvolVV9JXVtYSscflXM14A19dXPNQ==
+  resolved "https://registry.npm.taobao.org/rollup-plugin-commonjs/download/rollup-plugin-commonjs-10.0.0.tgz#58901ebe7ca44c2a03f0056de9bf9eb4a2dc8990"
+  integrity sha1-WJAevnykTCoD8AVt6b+etKLciZA=
   dependencies:
     estree-walker "^0.6.0"
     is-reference "^1.1.2"
@@ -4752,10 +4752,10 @@ rollup-plugin-commonjs@^10.0.0:
     resolve "^1.10.1"
     rollup-pluginutils "^2.7.0"
 
-rollup-plugin-filesize@^6.1.1:
+rollup-plugin-filesize@6.1.1:
   version "6.1.1"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-filesize/-/rollup-plugin-filesize-6.1.1.tgz#43c90120c6120fc3450ef34daadf5467c8821ad7"
-  integrity sha512-rvLvYXiKJVAPS2pbxzH72B72lnDMR3wM1O2seTWY/8xM6v9I6sO4f+/FrEo0TT2KsTTmCtlnueTFuiWRBKcIZw==
+  resolved "https://registry.npm.taobao.org/rollup-plugin-filesize/download/rollup-plugin-filesize-6.1.1.tgz#43c90120c6120fc3450ef34daadf5467c8821ad7"
+  integrity sha1-Q8kBIMYSD8NFDvNNqt9UZ8iCGtc=
   dependencies:
     boxen "^4.1.0"
     brotli-size "0.1.0"
@@ -4765,17 +4765,17 @@ rollup-plugin-filesize@^6.1.1:
     gzip-size "^5.1.1"
     terser "^4.0.0"
 
-rollup-plugin-json@^4.0.0:
+rollup-plugin-json@4.0.0:
   version "4.0.0"
-  resolved "https://registry.npmjs.org/rollup-plugin-json/-/rollup-plugin-json-4.0.0.tgz#a18da0a4b30bf5ca1ee76ddb1422afbb84ae2b9e"
-  integrity sha512-hgb8N7Cgfw5SZAkb3jf0QXii6QX/FOkiIq2M7BAQIEydjHvTyxXHQiIzZaTFgx1GK0cRCHOCBHIyEkkLdWKxow==
+  resolved "https://registry.npm.taobao.org/rollup-plugin-json/download/rollup-plugin-json-4.0.0.tgz#a18da0a4b30bf5ca1ee76ddb1422afbb84ae2b9e"
+  integrity sha1-oY2gpLML9coe523bFCKvu4SuK54=
   dependencies:
     rollup-pluginutils "^2.5.0"
 
-rollup-plugin-node-resolve@^5.1.0:
+rollup-plugin-node-resolve@5.1.0:
   version "5.1.0"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-node-resolve/-/rollup-plugin-node-resolve-5.1.0.tgz#49608b6ecaf2b776ab83e317d39b282d65d21b76"
-  integrity sha512-2hwwHNj0s8UEtUNT+lJq8rFWEznP7yJm3GCHBicadF6hiNX1aRARRZIjz2doeTlTGg/hOvJr4C/8+3k9Y/J5Hg==
+  resolved "https://registry.npm.taobao.org/rollup-plugin-node-resolve/download/rollup-plugin-node-resolve-5.1.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Frollup-plugin-node-resolve%2Fdownload%2Frollup-plugin-node-resolve-5.1.0.tgz#49608b6ecaf2b776ab83e317d39b282d65d21b76"
+  integrity sha1-SWCLbsryt3arg+MX05soLWXSG3Y=
   dependencies:
     "@types/resolve" "0.0.8"
     builtin-modules "^3.1.0"
@@ -4790,10 +4790,10 @@ rollup-pluginutils@^2.5.0, rollup-pluginutils@^2.7.0, rollup-pluginutils@^2.8.1:
   dependencies:
     estree-walker "^0.6.1"
 
-rollup@^1.16.2:
+rollup@1.16.2:
   version "1.16.2"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-1.16.2.tgz#959aeae4b06c8e540749bac442d6d37aefb9217d"
-  integrity sha512-UAZxaQvH0klYZdF+90xv9nGb+m4p8jdoaow1VL5/RzDK/gN/4CjvaMmJNcOIv1/+gtzswKhAg/467mzF0sLpAg==
+  resolved "https://registry.npm.taobao.org/rollup/download/rollup-1.16.2.tgz#959aeae4b06c8e540749bac442d6d37aefb9217d"
+  integrity sha1-lZrq5LBsjlQHSbrEQtbTeu+5IX0=
   dependencies:
     "@types/estree" "0.0.39"
     "@types/node" "^12.0.8"
@@ -5529,10 +5529,10 @@ unset-value@^1.0.0:
     has-value "^0.3.1"
     isobject "^3.0.0"
 
-update-notifier@^3.0.0:
+update-notifier@3.0.0, update-notifier@^3.0.0:
   version "3.0.0"
-  resolved "https://registry.npmjs.org/update-notifier/-/update-notifier-3.0.0.tgz#e9bbf8f0f5b7a2ce6666ca46334fdb29492e8fab"
-  integrity sha512-6Xe3oF2bvuoj4YECUc52yxVs94yWrxwqHbzyveDktTS1WhnlTRpNcQMxUshcB7nRVGi1jEXiqL5cW1S5WSyzKg==
+  resolved "https://registry.npm.taobao.org/update-notifier/download/update-notifier-3.0.0.tgz#e9bbf8f0f5b7a2ce6666ca46334fdb29492e8fab"
+  integrity sha1-6bv48PW3os5mZspGM0/bKUkuj6s=
   dependencies:
     boxen "^3.0.0"
     chalk "^2.0.1"
