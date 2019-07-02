@@ -575,10 +575,10 @@ ansi-align@^3.0.0:
   dependencies:
     string-width "^3.0.0"
 
-ansi-colors@4.0.1:
-  version "4.0.1"
-  resolved "https://registry.npm.taobao.org/ansi-colors/download/ansi-colors-4.0.1.tgz#3dc29301836c6152f617a71466bde162a2e42582"
-  integrity sha1-PcKTAYNsYVL2F6cUZr3hYqLkJYI=
+ansi-colors@4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/ansi-colors/-/ansi-colors-4.1.0.tgz#e1674bd61027c8c219b9edec929b6b57641b0c09"
+  integrity sha512-3NkLpm6I6kEgC8J0I9EZ0fouXc/mm5J9zqJFCgA2jGqmsL0O64I7Uvi3AmUMnnRqc6u7uLgVVnY4pyBQ03nCiw==
 
 ansi-colors@^3.2.4:
   version "3.2.4"
