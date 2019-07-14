@@ -8,7 +8,7 @@ os:
   - windows
 language: node_js
 node_js:
-  - 'lts/*'
+  - "lts/*"
 filter_secrets: false
 cache:
   yarn: true
