@@ -21,9 +21,6 @@ strategy:
       imageName: "windows-2019"
       node_version: 12.x
 
-trigger:
-  - master
-
 pool:
   vmImage: $(imageName)
 
