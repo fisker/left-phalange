@@ -48,7 +48,10 @@ steps:
     displayName: "Install nyc"
 
   - script: |
-      bash ./scripts/start-xvfb.sh
+      sudo cp scripts/xvfb.init /etc/init.d/xvfb
+      sudo chmod +x /etc/init.d/xvfb
+      sudo update-rc.d xvfb defaults
+      sudo service xvfb start
     condition: eq( variables['Agent.OS'], 'Linux' )
     displayName: "Linux Setup"
 
