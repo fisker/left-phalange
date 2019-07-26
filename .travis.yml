@@ -6,7 +6,8 @@ os:
   - linux
   - osx
   - windows
-sudo: true
+services:
+  - xvfb
 language: node_js
 node_js:
   - "lts/*"
