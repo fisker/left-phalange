@@ -24,6 +24,7 @@ script:
   - yarn build
   - yarn test-coverage
 after_script:
-  - npm install --global codecov coveralls
+  - npm install --global codecov coveralls codacy-coverage
   - cat ./coverage/lcov.info | coveralls
   - cat ./coverage/lcov.info | codecov
+  - cat ./coverage/lcov.info | codacy-coverage
