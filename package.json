@@ -52,8 +52,8 @@
     "lint:markdown": "markdownlint \"**/*.md\" --ignore \"**/node_modules/**\"",
     "lint:prettier": "prettier \"**/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml}\" --check",
     "release": "run-s lint build format test dist",
-    "test": "ava --verbose",
-    "test-coverage": "nyc --reporter=lcov --reporter=text ava"
+    "test": "ava",
+    "test-coverage": "nyc ava"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
@@ -85,7 +85,12 @@
     "rollup-plugin-node-resolve": "5.2.0"
   },
   "nyc": {
+    "all": true,
     "require": "esm",
+    "reporter": [
+      "lcov",
+      "text"
+    ],
     "include": [
       "src/**"
     ]
