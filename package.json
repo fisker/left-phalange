@@ -53,7 +53,7 @@
     "lint:prettier": "prettier \"**/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml}\" --check",
     "release": "run-s lint build format test dist",
     "test": "ava --verbose",
-    "test-coverage": "nyc yarn test"
+    "test-coverage": "nyc --reporter=lcov --reporter=text ava"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
@@ -83,6 +83,12 @@
     "rollup-plugin-filesize": "6.1.1",
     "rollup-plugin-json": "4.0.0",
     "rollup-plugin-node-resolve": "5.2.0"
+  },
+  "nyc": {
+    "require": "esm",
+    "include": [
+      "src/**"
+    ]
   },
   "ava": {
     "require": "esm",
