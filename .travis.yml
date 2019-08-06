@@ -5,7 +5,6 @@ env:
 os:
   - linux
   - osx
-  - windows
 dist: bionic
 services:
   - xvfb
