@@ -5,9 +5,9 @@
 
 strategy:
   matrix:
-    node_8_x:
-      imageName: "ubuntu-16.04"
-      node_version: 8.x
+    # node_8_x:
+    #   imageName: "ubuntu-16.04"
+    #   node_version: 8.x
     node_10_x:
       imageName: "ubuntu-16.04"
       node_version: 10.x
