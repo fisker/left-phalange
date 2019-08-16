@@ -5,6 +5,23 @@ on:
   - pull_request
 
 jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+        with:
+          fetch-depth: 1
+
+      - name: Use Node.js
+        uses: actions/setup-node@master
+        with:
+          node-version: 10.x
+
+      - name: Run Lint
+        run: yarn lint
+
   test:
     strategy:
       matrix:
@@ -39,8 +56,6 @@ jobs:
         run: |
           chmod +x ./scripts/xvfb.init
           ./scripts/xvfb.init start
-        env:
-          DISPLAY: :99.0
 
       - name: Windows Setup
         if: matrix.PLATFORM == 'windows-latest'
@@ -51,17 +66,14 @@ jobs:
       - name: Install Dependencies
         run: yarn
 
-      - name: Lint
-        run: yarn lint
-
       - name: Build
         run: yarn build
 
       - name: Test
         run: |
-          ps | grep Xvfb
-          echo $DISPLAY
           yarn test-coverage
+        env:
+          DISPLAY: :99.0
 
       - name: Upload Coverage
         uses: coverallsapp/github-action@master
