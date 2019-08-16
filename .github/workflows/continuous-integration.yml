@@ -33,10 +33,13 @@ jobs:
           node-version: ${{ matrix.NODE }}
 
       - run: npm install --global nyc
-      - if: matrix.PLATFORM == 'ubuntu-latest'
+      - name: Linux Setup
+        if: matrix.PLATFORM == 'ubuntu-latest'
         run: |
-          sh -e /etc/init.d/xvfb start
-          sleep 3
+          sudo cp scripts/xvfb.init /etc/init.d/xvfb
+          sudo chmod +x /etc/init.d/xvfb
+          sudo update-rc.d xvfb defaults
+          sudo service xvfb start
         env:
           DISPLAY: :99.0
 
