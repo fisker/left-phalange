@@ -56,7 +56,7 @@ jobs:
 
       - name: Linux Setup
         if: matrix.PLATFORM == 'ubuntu-latest'
-        run: Xvfb -ac :99 -screen 1280x1024x16 &
+        run: Xvfb -ac :99 -screen 0 1x1x1 &
 
       - name: Windows Setup
         if: matrix.PLATFORM == 'windows-latest'
