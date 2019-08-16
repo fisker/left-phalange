@@ -33,6 +33,7 @@ jobs:
           node-version: ${{ matrix.NODE }}
 
       - run: npm install --global nyc
+
       - name: Linux Setup
         if: matrix.PLATFORM == 'ubuntu-latest'
         run: |
@@ -42,6 +43,11 @@ jobs:
           sudo service xvfb start
         env:
           DISPLAY: :99.0
+
+      - name: Windows Setup
+        if: matrix.PLATFORM == 'windows-latest'
+        env:
+          YARN_GPG: no
 
       - name: Install Dependencies
         run: yarn
