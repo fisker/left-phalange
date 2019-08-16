@@ -37,10 +37,7 @@ jobs:
       - name: Linux Setup
         if: matrix.PLATFORM == 'ubuntu-latest'
         run: |
-          sudo cp scripts/xvfb.init /etc/init.d/xvfb
-          sudo chmod +x /etc/init.d/xvfb
-          sudo update-rc.d xvfb defaults
-          sudo service xvfb start
+          sudo apt install xsel
         env:
           DISPLAY: :99.0
 
