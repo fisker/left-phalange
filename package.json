@@ -53,7 +53,7 @@
     "lint:prettier": "prettier \"**/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml}\" --check",
     "release": "run-s lint build format test dist",
     "test": "ava",
-    "test-coverage": "nyc ava"
+    "test-coverage": "c8 ava"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
@@ -69,6 +69,7 @@
     "@fisker/lint-staged-config": "1.0.5",
     "@fisker/prettier-config": "1.0.18",
     "ava": "2.2.0",
+    "c8": "5.0.1",
     "cz-conventional-changelog": "3.0.2",
     "eslint": "6.1.0",
     "esm": "3.2.25",
@@ -83,16 +84,6 @@
     "rollup-plugin-filesize": "6.2.0",
     "rollup-plugin-json": "4.0.0",
     "rollup-plugin-node-resolve": "5.2.0"
-  },
-  "nyc": {
-    "require": "esm",
-    "reporter": [
-      "lcov",
-      "text"
-    ],
-    "include": [
-      "src/**"
-    ]
   },
   "ava": {
     "require": "esm",
