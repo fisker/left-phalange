@@ -56,7 +56,9 @@ jobs:
 
       - name: Linux Setup
         if: matrix.PLATFORM == 'ubuntu-latest'
-        run: Xvfb --help &
+        run: Xvfb -screen 0 1280x1024x16 &
+        env:
+          DISPLAY: :99
 
       - name: Windows Setup
         if: matrix.PLATFORM == 'windows-latest'
@@ -73,7 +75,7 @@ jobs:
       - name: Test
         run: yarn test-coverage
         env:
-          DISPLAY: :99.0
+          DISPLAY: :99
 
       - name: Upload Coverage
         uses: coverallsapp/github-action@master
