@@ -74,13 +74,7 @@ jobs:
 
       - name: Test
         run: |
-          apt-get install -y xorg-x11-server-Xvfb
-
-          # yum install -y xorg-x11-Xvfb
-          # pip install pyvirtualdisplay
-
-
-
+          apt-get install xvfb
           echo "Starting X virtual framebuffer (Xvfb) in background..."
           Xvfb -ac :99 -screen 0 1280x1024x16 &
           export DISPLAY=:99
