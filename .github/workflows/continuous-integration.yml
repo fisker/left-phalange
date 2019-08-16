@@ -38,7 +38,7 @@ jobs:
         if: matrix.PLATFORM == 'ubuntu-latest'
         run: |
           chmod +x ./scripts/xvfb.init
-          sh ./scripts/xvfb.init
+          ./scripts/xvfb.init start
         env:
           DISPLAY: :99.0
 
