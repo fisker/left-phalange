@@ -31,7 +31,7 @@ jobs:
         PLATFORM:
           - ubuntu-latest
           # - macos-latest
-          # - windows-latest
+          - windows-latest
         NODE:
           - 12.x
           # - 10.x
@@ -57,8 +57,11 @@ jobs:
       - name: Linux Setup
         if: matrix.PLATFORM == 'ubuntu-latest'
         run: |
-          chmod +x ./scripts/xvfb.init
-          ./scripts/xvfb.init start
+          sudo apt-get install xvfb
+          echo "Starting X virtual framebuffer (Xvfb) in background..."
+          Xvfb -ac :99 -screen 0 1280x1024x16 &
+        env:
+          DISPLAY: :99.0
 
       - name: Windows Setup
         if: matrix.PLATFORM == 'windows-latest'
@@ -73,14 +76,7 @@ jobs:
         run: yarn build
 
       - name: Test
-        run: |
-          sudo apt-get install xvfb
-          echo "Starting X virtual framebuffer (Xvfb) in background..."
-          Xvfb -ac :99 -screen 0 1280x1024x16 &
-          export DISPLAY=:99
-          yarn test-coverage
-        env:
-          DISPLAY: :99.0
+        run: yarn test-coverage
 
       - name: Upload Coverage
         uses: coverallsapp/github-action@master
