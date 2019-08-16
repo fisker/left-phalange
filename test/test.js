@@ -25,8 +25,6 @@ function run({file, stdin, flags = {}}) {
     )
     .filter(Boolean)
 
-  return stdin
-
   return execa.sync('node', ['-r', 'esm', '../src/index.js', ...arguments_], {
     cwd: __dirname,
     input: stdin,
