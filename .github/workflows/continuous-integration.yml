@@ -46,6 +46,7 @@ jobs:
 
       - name: Windows Setup
         if: matrix.PLATFORM == 'windows-latest'
+        run: echo %YARN_GPG%
         env:
           YARN_GPG: no
 
