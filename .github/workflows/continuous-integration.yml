@@ -59,7 +59,7 @@ jobs:
 
       - name: Test
         run: |
-          ps –ef | grep Xvfb
+          ps | grep Xvfb
           echo $DISPLAY
           yarn test-coverage
 
