@@ -1,29 +1,29 @@
-name: Test
+name: CI
 
 on:
   - push
   - pull_request
 
 jobs:
-  lint:
-    name: Lint
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@master
-        with:
-          fetch-depth: 1
+  # lint:
+  #   name: Lint
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@master
+  #       with:
+  #         fetch-depth: 1
 
-      - name: Use Node.js
-        uses: actions/setup-node@master
-        with:
-          node-version: 10.x
+  #     - name: Use Node.js
+  #       uses: actions/setup-node@master
+  #       with:
+  #         node-version: 10.x
 
-      - name: Install Dependencies
-        run: yarn
+  #     - name: Install Dependencies
+  #       run: yarn
 
-      - name: Run Lint
-        run: yarn lint
+  #     - name: Run Lint
+  #       run: yarn lint
 
   test:
     strategy:
@@ -74,10 +74,16 @@ jobs:
 
       - name: Test
         run: |
-          chmod +x ./scripts/xvfb.init
-          ./scripts/xvfb.init start
-          echo $DISPLAY
-          sleep(3)
+          yum install -y xorg-x11-server-Xvfb
+
+          # yum install -y xorg-x11-Xvfb
+          # pip install pyvirtualdisplay
+
+
+
+          echo "Starting X virtual framebuffer (Xvfb) in background..."
+          Xvfb -ac :99 -screen 0 1280x1024x16 &
+          export DISPLAY=:99
           yarn test-coverage
         env:
           DISPLAY: :99.0
