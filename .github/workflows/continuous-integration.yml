@@ -56,10 +56,7 @@ jobs:
 
       - name: Linux Setup
         if: matrix.PLATFORM == 'ubuntu-latest'
-        run: |
-          sudo apt-get install xvfb
-          echo "Starting X virtual framebuffer (Xvfb) in background..."
-          Xvfb -ac :99 -screen 0 1280x1024x16 &
+        run: Xvfb -ac :99 -screen 0 1280x1024x16 &
 
       - name: Windows Setup
         if: matrix.PLATFORM == 'windows-latest'
