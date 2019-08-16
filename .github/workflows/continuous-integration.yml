@@ -58,7 +58,10 @@ jobs:
         run: yarn build
 
       - name: Test
-        run: yarn test-coverage
+        run: |
+          ps –ef | grep Xvfb
+          echo $DISPLAY
+          yarn test-coverage
 
       - name: Upload Coverage
         uses: coverallsapp/github-action@master
