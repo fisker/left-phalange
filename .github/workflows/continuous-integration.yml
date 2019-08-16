@@ -60,8 +60,6 @@ jobs:
           sudo apt-get install xvfb
           echo "Starting X virtual framebuffer (Xvfb) in background..."
           Xvfb -ac :99 -screen 0 1280x1024x16 &
-        env:
-          DISPLAY: :99.0
 
       - name: Windows Setup
         if: matrix.PLATFORM == 'windows-latest'
@@ -77,6 +75,8 @@ jobs:
 
       - name: Test
         run: yarn test-coverage
+        env:
+          DISPLAY: :99.0
 
       - name: Upload Coverage
         uses: coverallsapp/github-action@master
