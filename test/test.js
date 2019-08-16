@@ -25,7 +25,7 @@ function run({file, stdin, flags = {}}) {
     )
     .filter(Boolean)
 
-  return execa.sync('node', ['../lib/index.js', ...arguments_], {
+  return execa.sync('node', ['../bin/cli', ...arguments_], {
     cwd: __dirname,
     input: stdin,
   })
