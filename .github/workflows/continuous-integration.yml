@@ -56,7 +56,7 @@ jobs:
 
       - name: Linux Setup
         if: matrix.PLATFORM == 'ubuntu-latest'
-        run: sudo systemctl start xvfb
+        run: Xvfb &
 
       - name: Windows Setup
         if: matrix.PLATFORM == 'windows-latest'
