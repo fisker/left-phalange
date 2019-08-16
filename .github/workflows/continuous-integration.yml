@@ -33,7 +33,7 @@ jobs:
         PLATFORM:
           - ubuntu-latest
           # - macos-latest
-          # - windows-latest
+          - windows-latest
         NODE:
           - 12.x
           # - 10.x
