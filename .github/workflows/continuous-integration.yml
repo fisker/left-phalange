@@ -56,7 +56,7 @@ jobs:
 
       - name: Linux Setup
         if: matrix.PLATFORM == 'ubuntu-latest'
-        run: Xvfb &
+        run: Xvfb --help &
 
       - name: Windows Setup
         if: matrix.PLATFORM == 'windows-latest'
