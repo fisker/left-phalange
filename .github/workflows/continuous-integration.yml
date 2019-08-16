@@ -74,7 +74,7 @@ jobs:
 
       - name: Test
         run: |
-          yum install -y xorg-x11-server-Xvfb
+          apt-get install -y xorg-x11-server-Xvfb
 
           # yum install -y xorg-x11-Xvfb
           # pip install pyvirtualdisplay
