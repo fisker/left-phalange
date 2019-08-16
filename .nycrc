@@ -1,0 +1,10 @@
+{
+  "require": "esm",
+  "reporter": [
+    "lcov",
+    "text"
+  ],
+  "include": [
+    "src/**"
+  ]
+}
