@@ -14,7 +14,7 @@ jobs:
   #       with:
   #         fetch-depth: 1
 
-  #     - name: Use Node.js
+  #     - name: Setup Node.js
   #       uses: actions/setup-node@master
   #       with:
   #         node-version: 10.x
@@ -47,30 +47,25 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: Use Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@master
         with:
           node-version: ${{ matrix.NODE }}
 
-      - run: npm install --global nyc
+      - name: Install nyc
+        run: npm install --global nyc
 
       - name: Linux Setup
         if: matrix.PLATFORM == 'ubuntu-latest'
         run: Xvfb -ac :99 -screen 0 800x600x8 &
 
-      - name: Windows Setup
-        if: matrix.PLATFORM == 'windows-latest'
-        run: echo %YARN_GPG%
-        env:
-          YARN_GPG: no
-
       - name: Install Dependencies
         run: yarn
 
-      - name: Build
+      - name: Build Package
         run: yarn build
 
-      - name: Test
+      - name: Run Test
         run: yarn test-coverage
         env:
           DISPLAY: :99
