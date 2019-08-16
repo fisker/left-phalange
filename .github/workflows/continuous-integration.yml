@@ -19,6 +19,9 @@ jobs:
         with:
           node-version: 10.x
 
+      - name: Install Dependencies
+        run: yarn
+
       - name: Run Lint
         run: yarn lint
 
@@ -71,6 +74,7 @@ jobs:
 
       - name: Test
         run: |
+          echo $DISPLAY
           yarn test-coverage
         env:
           DISPLAY: :99.0
