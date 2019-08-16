@@ -36,9 +36,12 @@ jobs:
           - macos-latest
           - windows-latest
         NODE:
+          - 12.x
           - 10.x
-        include:
-          - PLATFORM: ubuntu-latest
+        exclude:
+          - PLATFORM: macos-latest
+            NODE: 12.x
+          - PLATFORM: windows-latest
             NODE: 12.x
 
     name: Test on node ${{ matrix.NODE }} and ${{ matrix.PLATFORM }}
