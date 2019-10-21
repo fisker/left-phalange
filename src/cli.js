@@ -4,8 +4,8 @@ import colors from 'ansi-colors'
 const cli = meow(
   `
   Usage
-    $ left-phalange <file>
-    $ lp <file>
+    left-phalange <file>
+    lp <file>
 
   Options
     -i, --input           ${colors.cyan('Input Data type')}
@@ -16,8 +16,8 @@ const cli = meow(
     -v, --version         ${colors.cyan('Show version')}
 
   Examples
-    $ lp data.toml > data.json
-    $ cat data.yaml | lp -p
+    lp data.toml > data.json
+    cat data.yaml | lp -p
   `,
   {
     flags: {
