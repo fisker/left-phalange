@@ -20,8 +20,8 @@ npm install --global left-phalange
 lp --help
 
   Usage
-    $ left-phalange <file>
-    $ lp <file>
+    left-phalange <file>
+    lp <file>
 
   Options
     -i, --input           Input Data type
@@ -32,8 +32,8 @@ lp --help
     -v, --version         Show version
 
   Examples
-    $ lp data.toml > data.json
-    $ cat data.yaml | lp -p
+    lp data.toml > data.json
+    cat data.yaml | lp -p
 ```
 
 ## Options
