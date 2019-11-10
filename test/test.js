@@ -7,7 +7,7 @@ import {
 
 const packageJson = require('../package.json')
 
-execa.commandSync('chmod +x ../bin/cli', {
+execa.commandSync('chmod +x ../dist/cli', {
   cwd: __dirname,
 })
 
