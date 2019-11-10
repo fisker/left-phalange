@@ -2,7 +2,7 @@
   "name": "left-phalange",
   "version": "1.1.4",
   "description": "Convert data between CommonJS, ESModule, INI, JSON, JSON5, TOML, YAML",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "repository": "fisker/left-phalange",
   "author": {
     "name": "fisker Cheung",
@@ -20,11 +20,11 @@
   ],
   "license": "MIT",
   "files": [
-    "bin"
+    "dist"
   ],
   "bin": {
-    "left-phalange": "bin/cli",
-    "lp": "bin/cli"
+    "left-phalange": "dist/cli",
+    "lp": "dist/cli"
   },
   "dependencies": {
     "ansi-colors": "4.1.1",
@@ -40,6 +40,8 @@
     }
   },
   "scripts": {
+    "clean": "run-p clean:*",
+    "clean:js": "del-cli dist",
     "build": "run-p build:*",
     "build:js": "rollup --config",
     "dist": "run-p dist:*",
@@ -72,6 +74,7 @@
     "ava": "2.4.0",
     "c8": "6.0.1",
     "cz-conventional-changelog": "3.0.2",
+    "del-cli": "3.0.0",
     "eslint": "6.6.0",
     "esm": "3.2.25",
     "execa": "3.2.0",

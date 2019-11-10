@@ -93,5 +93,4 @@ typings/
 .dynamodb/
 
 # project ignore files
-/bin
-/lib
+dist/

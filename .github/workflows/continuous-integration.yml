@@ -41,6 +41,11 @@ jobs:
           - 13.x
           - 12.x
           - 10.x
+        # exclude:
+        #   - PLATFORM: macos-latest
+        #     NODE: 12.x
+        #   - PLATFORM: windows-latest
+        #     NODE: 12.x
 
     name: Test on node ${{ matrix.NODE }} and ${{ matrix.PLATFORM }}
 
@@ -70,7 +75,14 @@ jobs:
         env:
           DISPLAY: :99
 
-      - name: Upload Coverage
+      - name: Upload Coverage Parallel
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          parallel: true
+
+      - name: Upload Coverage Finished
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          parallel-finished: true
