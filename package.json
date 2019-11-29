@@ -2,42 +2,30 @@
   "name": "left-phalange",
   "version": "1.1.5",
   "description": "Convert data between CommonJS, ESModule, INI, JSON, JSON5, TOML, YAML",
-  "main": "dist/cli",
+  "keywords": [
+    "convert",
+    "data",
+    "ini",
+    "json",
+    "json5",
+    "toml",
+    "yaml"
+  ],
   "repository": "fisker/left-phalange",
+  "license": "MIT",
   "author": {
     "name": "fisker Cheung",
     "email": "lionkay@gmail.com",
     "url": "https://www.fiskercheung.com/"
   },
-  "keywords": [
-    "data",
-    "convert",
-    "json",
-    "yaml",
-    "json5",
-    "toml",
-    "ini"
-  ],
-  "license": "MIT",
   "files": [
     "dist"
   ],
+  "sideEffects": false,
+  "main": "dist/cli",
   "bin": {
     "left-phalange": "dist/cli",
     "lp": "dist/cli"
-  },
-  "dependencies": {
-    "ansi-colors": "4.1.1",
-    "clipboardy": "2.1.0",
-    "get-stdin": "7.0.0",
-    "left-phalange-api": "1.1.9",
-    "meow": "5.0.0",
-    "update-notifier": "3.0.1"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   },
   "scripts": {
     "build": "run-p build:*",
@@ -51,6 +39,7 @@
     "format:eslint": "yarn lint:eslint --fix",
     "format:markdown": "yarn lint:markdown --fix",
     "format:prettier": "yarn lint:prettier --write",
+    "format:sort-package-json": "sort-package-json \"package.json\" \"packages/*/package.json\"",
     "lint": "run-p lint:*",
     "lint:eslint": "eslint \"**/*.{js,mjs,vue}\"",
     "lint:markdown": "markdownlint \"**/*.md\" --ignore \"**/node_modules/**\"",
@@ -59,11 +48,19 @@
     "test": "ava",
     "test-coverage": "c8 ava"
   },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "access": "public"
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
-  "sideEffects": false,
+  "dependencies": {
+    "ansi-colors": "4.1.1",
+    "clipboardy": "2.1.0",
+    "get-stdin": "7.0.0",
+    "left-phalange-api": "1.1.9",
+    "meow": "5.0.0",
+    "update-notifier": "3.0.1"
+  },
   "devDependencies": {
     "@commitlint/cli": "8.2.0",
     "@fisker/commitlint-config": "1.1.4",
@@ -88,7 +85,12 @@
     "rollup-plugin-commonjs": "10.1.0",
     "rollup-plugin-filesize": "6.2.1",
     "rollup-plugin-json": "4.0.0",
-    "rollup-plugin-node-resolve": "5.2.0"
+    "rollup-plugin-node-resolve": "5.2.0",
+    "sort-package-json": "1.24.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "ava": {
     "require": "esm",
