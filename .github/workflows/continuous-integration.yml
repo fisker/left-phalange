@@ -9,54 +9,9 @@ on:
   #   - cron: "0 23 * * 6"
 
 jobs:
-  # test:
-  #   strategy:
-  #     matrix:
-  #       PLATFORM:
-  #         - "ubuntu-latest"
-  #         # - "macos-latest"
-  #         # - "windows-latest"
-  #       NODE:
-  #         # - "13"
-  #         - "12"
-  #         # - "10"
-  #       # exclude:
-  #       #   - PLATFORM: "macos-latest"
-  #       #     NODE: "12"
-
-  #   name: Test on node ${{ matrix.NODE }} and ${{ matrix.PLATFORM }}
-  #   runs-on: ${{ matrix.PLATFORM }}
-  #   steps:
-  #     - name: Checkout
-  #       uses: actions/checkout@master
-
-  #     - name: Setup Node.js
-  #       uses: actions/setup-node@master
-  #       with:
-  #         node-version: ${{ matrix.NODE }}
-
-  #     - name: Install Dependencies
-  #       run: yarn
-
-  #     - name: Run Test
-  #       run: yarn test-coverage
-
-  #     - name: Upload Coverage Parallel
-  #       uses: coverallsapp/github-action@master
-  #       if: success()
-  #       with:
-  #         github-token: ${{ secrets.GITHUB_TOKEN }}
-  #         parallel: true
-
-  #     - name: Upload Coverage Finished
-  #       uses: coverallsapp/github-action@master
-  #       if: success()
-  #       with:
-  #         github-token: ${{ secrets.GITHUB_TOKEN }}
-  #         parallel-finished: true
-
-  test-dist:
+  test:
     strategy:
+      fail-fast: false
       matrix:
         PLATFORM:
           - "ubuntu-latest"
@@ -100,19 +55,12 @@ jobs:
         env:
           DISPLAY: :99
 
-      - name: Upload Coverage Parallel
+      - name: Upload Coverage
         uses: coverallsapp/github-action@master
         if: success()
+        continue-on-error: true
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          parallel: true
-
-      - name: Upload Coverage Finished
-        uses: coverallsapp/github-action@master
-        if: success()
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          parallel-finished: true
 
   lint:
     name: Lint
