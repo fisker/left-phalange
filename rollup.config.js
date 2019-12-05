@@ -1,9 +1,9 @@
 import cjs from 'rollup-plugin-commonjs'
-import json from 'rollup-plugin-json'
-import filesize from 'rollup-plugin-filesize'
+// eslint-disable-next-line import/no-unresolved
+import json from '@rollup/plugin-json'
 import {dependencies} from './package.json'
 
-const plugins = [cjs(), json(), filesize()]
+const plugins = [cjs(), json()]
 
 const external = ['path', 'fs', ...Object.keys(dependencies)]
 
