@@ -66,7 +66,7 @@
     "clipboardy": "2.1.0",
     "get-stdin": "7.0.0",
     "left-phalange-api": "1.1.10",
-    "meow": "5.0.0",
+    "meow": "6.0.0",
     "update-notifier": "3.0.1"
   },
   "devDependencies": {
