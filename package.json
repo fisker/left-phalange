@@ -67,7 +67,7 @@
     "get-stdin": "7.0.0",
     "left-phalange-api": "1.1.10",
     "meow": "6.0.0",
-    "update-notifier": "3.0.1"
+    "update-notifier": "4.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "8.2.0",
