@@ -47,7 +47,7 @@
     "lint:prettier": "prettier \"**/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml}\" --check",
     "release": "run-s lint build format test dist",
     "test": "ava",
-    "test-coverage": "c8 ava"
+    "test-coverage": "c8 yarn test"
   },
   "config": {
     "commitizen": {
@@ -55,9 +55,6 @@
     }
   },
   "ava": {
-    "helpers": [
-      "test/helpers/**/*"
-    ],
     "require": "esm",
     "verbose": true
   },
