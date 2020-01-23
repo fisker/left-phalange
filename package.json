@@ -72,7 +72,7 @@
     "@fisker/eslint-config": "1.6.1",
     "@fisker/eslint-config-ava": "1.2.5",
     "@fisker/husky-config": "1.1.7",
-    "@fisker/lint-staged-config": "1.0.8",
+    "@fisker/lint-staged-config": "1.0.10",
     "@fisker/prettier-config": "1.0.26",
     "@rollup/plugin-commonjs": "11.0.1",
     "@rollup/plugin-json": "4.0.1",
