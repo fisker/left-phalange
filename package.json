@@ -70,7 +70,7 @@
     "@commitlint/cli": "8.3.5",
     "@fisker/commitlint-config": "1.1.7",
     "@fisker/eslint-config": "1.6.2",
-    "@fisker/eslint-config-ava": "1.2.7",
+    "@fisker/eslint-config-ava": "1.2.8",
     "@fisker/husky-config": "1.1.8",
     "@fisker/lint-staged-config": "1.0.11",
     "@fisker/prettier-config": "1.0.27",
