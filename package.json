@@ -69,7 +69,7 @@
   "devDependencies": {
     "@commitlint/cli": "8.3.5",
     "@fisker/commitlint-config": "1.1.7",
-    "@fisker/eslint-config": "1.6.3",
+    "@fisker/eslint-config": "1.6.4",
     "@fisker/eslint-config-ava": "1.2.8",
     "@fisker/husky-config": "1.1.9",
     "@fisker/lint-staged-config": "1.0.11",
