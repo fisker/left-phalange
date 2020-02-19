@@ -11,7 +11,12 @@
     "toml",
     "yaml"
   ],
+  "homepage": "https://github.com/fisker/left-phalange#readme",
+  "bugs": {
+    "url": "https://github.com/fisker/left-phalange/issues"
+  },
   "repository": "fisker/left-phalange",
+  "funding": "https://github.com/fisker/left-phalange?sponsor=1",
   "license": "MIT",
   "author": {
     "name": "fisker Cheung",
