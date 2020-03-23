@@ -31,7 +31,7 @@ function run({file, stdin, flags = {}}) {
   })
 }
 
-test('Should print json file', t => {
+test('Should print json file', (t) => {
   const result = run({
     file: '../package.json',
   })
@@ -39,7 +39,7 @@ test('Should print json file', t => {
   t.is(result.stdout, JSON.stringify(packageJson))
 })
 
-test('Should accept stdin', t => {
+test('Should accept stdin', (t) => {
   const result = run({
     stdin: '{"left": "phalange"}',
   })
@@ -47,7 +47,7 @@ test('Should accept stdin', t => {
   t.is(result.stdout, '{"left":"phalange"}')
 })
 
-test('Should print pretty', t => {
+test('Should print pretty', (t) => {
   const result = run({
     file: '../package.json',
     flags: {
@@ -58,7 +58,7 @@ test('Should print pretty', t => {
   t.is(result.stdout, JSON.stringify(packageJson, null, 2))
 })
 
-test('Should accept TOML', t => {
+test('Should accept TOML', (t) => {
   const result = run({
     stdin: 'left= "phalange"',
     flags: {
@@ -69,7 +69,7 @@ test('Should accept TOML', t => {
   t.is(result.stdout, '{"left":"phalange"}')
 })
 
-test('Should print as TOML', t => {
+test('Should print as TOML', (t) => {
   const result = run({
     stdin: '{"left": "phalange"}',
     flags: {
@@ -80,7 +80,7 @@ test('Should print as TOML', t => {
   t.is(result.stdout, 'left = "phalange"\n')
 })
 
-test('Should copy to clipboard', t => {
+test('Should copy to clipboard', (t) => {
   const time = new Date().toISOString()
   writeClipboard(time)
   t.is(readClipboard(), time)
@@ -95,13 +95,13 @@ test('Should copy to clipboard', t => {
   t.is(readClipboard(), JSON.stringify(packageJson))
 })
 
-test('Should show help when no input', t => {
+test('Should show help when no input', (t) => {
   const result = run({})
 
   t.true(result.stdout.includes('Examples'))
 })
 
-test('Should throw on parse error', t => {
+test('Should throw on parse error', (t) => {
   t.throws(() => {
     run({
       file: __filename,
@@ -109,7 +109,7 @@ test('Should throw on parse error', t => {
   })
 })
 
-test('Should throw on non-exists file', t => {
+test('Should throw on non-exists file', (t) => {
   t.throws(() => {
     run({
       file: 'left.phalange',
