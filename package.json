@@ -83,7 +83,7 @@
     "@fisker/husky-config": "2.1.0",
     "@fisker/lint-staged-config": "2.1.0",
     "@fisker/prettier-config": "2.1.0",
-    "@rollup/plugin-commonjs": "11.0.2",
+    "@rollup/plugin-commonjs": "11.1.0",
     "@rollup/plugin-json": "4.0.2",
     "@rollup/plugin-node-resolve": "7.1.1",
     "ava": "3.6.0",
