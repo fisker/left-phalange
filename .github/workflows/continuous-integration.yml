@@ -53,7 +53,7 @@ jobs:
           path: dist
 
       - name: Run Test
-        run: yarn test-coverage --timeout=10m
+        run: yarn test-coverage --timeout=10s
         env:
           DISPLAY: :99
 
