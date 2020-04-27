@@ -21,10 +21,9 @@ jobs:
           - "14"
           - "12"
           - "10"
-        exclude:
-          # Test fails on macos Node.js 10
-          - os: "macos-latest"
-            node_version: "10"
+        # exclude:
+        #   - os: "macos-latest"
+        #     node_version: "12"
 
     name: Node.js ${{ matrix.node_version }} on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
@@ -54,7 +53,7 @@ jobs:
           path: dist
 
       - name: Run Test
-        run: yarn test-coverage
+        run: yarn test-coverage --timeout=10s
         env:
           DISPLAY: :99
 
