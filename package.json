@@ -69,7 +69,7 @@
   "dependencies": {
     "ansi-colors": "4.1.1",
     "clipboardy": "2.3.0",
-    "get-stdin": "7.0.0",
+    "get-stdin": "8.0.0",
     "left-phalange-api": "1.1.12",
     "meow": "7.0.1",
     "update-notifier": "4.1.0"
