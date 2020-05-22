@@ -92,7 +92,7 @@
     "del-cli": "3.0.1",
     "eslint": "7.0.0",
     "esm": "3.2.25",
-    "execa": "4.0.1",
+    "execa": "4.0.2",
     "husky": "4.2.5",
     "lint-staged": "10.2.6",
     "markdownlint-cli": "0.23.1",
