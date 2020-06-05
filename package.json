@@ -84,7 +84,7 @@
     "@fisker/lint-staged-config": "2.1.0",
     "@fisker/prettier-config": "2.2.2",
     "@rollup/plugin-commonjs": "12.0.0",
-    "@rollup/plugin-json": "4.0.3",
+    "@rollup/plugin-json": "4.1.0",
     "@rollup/plugin-node-resolve": "8.0.0",
     "ava": "3.8.2",
     "c8": "7.1.2",
