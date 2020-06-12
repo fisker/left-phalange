@@ -77,7 +77,7 @@
   "devDependencies": {
     "@ava/babel": "1.0.1",
     "@commitlint/cli": "8.3.5",
-    "@fisker/commitlint-config": "1.1.7",
+    "@fisker/commitlint-config": "1.2.0",
     "@fisker/eslint-config": "2.2.5",
     "@fisker/eslint-config-ava": "1.2.10",
     "@fisker/husky-config": "2.1.3",
