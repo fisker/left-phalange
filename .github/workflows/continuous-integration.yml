@@ -53,9 +53,7 @@ jobs:
           path: dist
 
       - name: Run Test
-        run: yarn test-coverage --timeout=10s
-        env:
-          DISPLAY: :99
+        run: yarn test-coverage
 
       - name: Upload Coverage
         uses: coverallsapp/github-action@master
@@ -87,8 +85,6 @@ jobs:
 
       - name: Setup Node.js
         uses: actions/setup-node@master
-        with:
-          node-version: "12"
 
       - name: Install Dependencies
         run: yarn
@@ -107,8 +103,6 @@ jobs:
 
       - name: Setup Node.js
         uses: actions/setup-node@master
-        with:
-          node-version: "12"
 
       - name: Install Dependencies
         run: yarn
