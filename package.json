@@ -72,7 +72,7 @@
     "get-stdin": "8.0.0",
     "left-phalange-api": "1.2.0",
     "meow": "7.0.1",
-    "update-notifier": "4.1.0"
+    "update-notifier": "4.1.1"
   },
   "devDependencies": {
     "@ava/babel": "1.0.1",
