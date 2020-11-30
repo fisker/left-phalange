@@ -1,7 +1,8 @@
+import path from 'path'
 import getStdin from 'get-stdin'
 import {load, parse} from 'left-phalange-api'
 
-import {join, isAbsolute} from 'path'
+const {join, isAbsolute} = path
 
 async function input(cli) {
   const {input, flags} = cli
