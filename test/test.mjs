@@ -1,3 +1,5 @@
+import fs from 'fs'
+import path from 'path'
 import test from 'ava'
 import execa from 'execa'
 import {
@@ -5,10 +7,13 @@ import {
   readSync as readClipboard,
 } from 'clipboardy'
 
-const packageJson = require('../package.json')
+const dirname = path.join(process.cwd(), 'test')
+const filename = path.join(dirname, 'test.mjs')
+
+const packageJson = JSON.parse(fs.readFileSync(path.join(dirname, '../package.json')))
 
 execa.commandSync('chmod +x ../dist/cli', {
-  cwd: __dirname,
+  cwd: dirname,
 })
 
 function run({file, stdin, flags = {}}) {
@@ -26,7 +31,7 @@ function run({file, stdin, flags = {}}) {
     .filter(Boolean)
 
   return execa.sync('node', ['../src/index.mjs', ...arguments_], {
-    cwd: __dirname,
+    cwd: dirname,
     input: stdin,
   })
 }
@@ -104,7 +109,7 @@ test('Should show help when no input', (t) => {
 test('Should throw on parse error', (t) => {
   t.throws(() => {
     run({
-      file: __filename,
+      file: filename,
     })
   })
 })
