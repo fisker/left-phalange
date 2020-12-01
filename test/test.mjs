@@ -2,10 +2,12 @@ import fs from 'fs'
 import path from 'path'
 import test from 'ava'
 import execa from 'execa'
-import {
-  writeSync as writeClipboard,
-  readSync as readClipboard,
-} from 'clipboardy'
+import clipboardy from 'clipboardy'
+
+const {
+  writeSync : writeClipboard,
+  readSync : readClipboard,
+} = clipboardy
 
 const dirname = path.join(process.cwd(), 'test')
 const filename = path.join(dirname, 'test.mjs')
