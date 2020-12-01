@@ -4,10 +4,7 @@ import test from 'ava'
 import execa from 'execa'
 import clipboardy from 'clipboardy'
 
-const {
-  writeSync : writeClipboard,
-  readSync : readClipboard,
-} = clipboardy
+const {writeSync: writeClipboard, readSync: readClipboard} = clipboardy
 
 const dirname = path.join(process.cwd(), 'test')
 const filename = path.join(dirname, 'test.mjs')

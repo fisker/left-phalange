@@ -1,8 +1,10 @@
-import {writeSync as copyToClipboard} from 'clipboardy'
+import clipboardy from 'clipboardy'
 import cli from './cli.mjs'
 import update from './update.mjs'
 import input from './input.mjs'
 import output from './output.mjs'
+
+const {writeSync: copyToClipboard} = clipboardy
 
 async function main(cli) {
   const data = await input(cli)

@@ -1,4 +1,6 @@
-import {stringify} from 'left-phalange-api'
+import leftPhalange from 'left-phalange-api'
+
+const {stringify} = leftPhalange
 
 function output(cli, data) {
   const {flags} = cli
