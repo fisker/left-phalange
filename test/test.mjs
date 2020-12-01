@@ -10,7 +10,9 @@ import {
 const dirname = path.join(process.cwd(), 'test')
 const filename = path.join(dirname, 'test.mjs')
 
-const packageJson = JSON.parse(fs.readFileSync(path.join(dirname, '../package.json')))
+const packageJson = JSON.parse(
+  fs.readFileSync(path.join(dirname, '../package.json'))
+)
 
 execa.commandSync('chmod +x ../dist/cli.mjs', {
   cwd: dirname,
