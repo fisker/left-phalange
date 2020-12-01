@@ -9,8 +9,8 @@ const external = ['path', 'fs', ...Object.keys(dependencies)]
 export default {
   input: 'src/index.mjs',
   output: {
-    file: 'dist/cli',
-    format: 'cjs',
+    file: 'dist/cli.mjs',
+    format: 'esm',
     banner: '#!/usr/bin/env node',
   },
   external,

@@ -1,8 +1,10 @@
 import updateNotifier from 'update-notifier'
-import requireCommonJs from 'import-commonjs'
+import importCommonJs from 'import-commonjs'
+
+const require = importCommonJs(import.meta.url)
 
 function update() {
-  updateNotifier({pkg: requireCommonJs('../package.json')}).notify()
+  updateNotifier({pkg: require('../package.json')}).notify()
 }
 
 export default update
