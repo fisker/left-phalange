@@ -66,7 +66,7 @@
     "ansi-colors": "4.1.1",
     "clipboardy": "2.3.0",
     "get-stdin": "8.0.0",
-    "import-commonjs": "0.0.1",
+    "import-commonjs": "0.0.2",
     "left-phalange-api": "1.3.2",
     "meow": "8.0.0",
     "update-notifier": "5.0.1"
