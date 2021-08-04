@@ -37,6 +37,10 @@ jobs:
         with:
           node-version: ${{ matrix.node_version }}
 
+      - name: Linux Setup
+        if: matrix.os == 'ubuntu-latest'
+        run: Xvfb -ac :99 -screen 0 800x600x8 &
+
       - name: Install Dependencies
         run: yarn
 
