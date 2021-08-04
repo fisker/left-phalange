@@ -16,5 +16,11 @@ module.exports = {
   rules: {},
   plugins: [],
   globals: {},
-  overrides: [],
+  overrides: [
+    {
+      files: ['test/**/*'],
+
+      extends: ['@fisker/ava'],
+    },
+  ],
 }

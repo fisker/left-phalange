@@ -1,5 +1,6 @@
-import fs from 'fs'
-import path from 'path'
+import fs from 'node:fs'
+import path from 'node:path'
+import process from 'node:process'
 import test from 'ava'
 import execa from 'execa'
 import clipboardy from 'clipboardy'
@@ -7,13 +8,13 @@ import clipboardy from 'clipboardy'
 const {writeSync: writeClipboard, readSync: readClipboard} = clipboardy
 
 const dirname = path.join(process.cwd(), 'test')
-const filename = path.join(dirname, 'test.mjs')
+const filename = path.join(dirname, 'test.js')
 
 const packageJson = JSON.parse(
   fs.readFileSync(path.join(dirname, '../package.json'))
 )
 
-execa.commandSync('chmod +x ../dist/cli.mjs', {
+execa.commandSync('chmod +x ../lib/cli.js', {
   cwd: dirname,
 })
 
@@ -31,7 +32,7 @@ function run({file, stdin, flags = {}}) {
     )
     .filter(Boolean)
 
-  return execa.sync('node', ['../src/index.mjs', ...arguments_], {
+  return execa.sync('node', ['../lib/index.js', ...arguments_], {
     cwd: dirname,
     input: stdin,
   })
