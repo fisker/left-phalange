@@ -26,8 +26,8 @@
   "sideEffects": false,
   "type": "module",
   "bin": {
-    "left-phalange": "./lib/cli.js",
-    "lp": "./lib/cli.js"
+    "left-phalange": "./lib/index.js",
+    "lp": "./lib/index.js"
   },
   "files": [
     "lib"
