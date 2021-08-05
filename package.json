@@ -1,6 +1,6 @@
 {
   "name": "left-phalange",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Convert data between CommonJS, ESModule, INI, JSON, JSON5, TOML, YAML",
   "keywords": [
     "convert",
