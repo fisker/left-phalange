@@ -1,6 +1,6 @@
 # left-phalange
 
-> Convert data between CommonJS, ESModule, INI, JSON, JSON5, TOML, YAML
+> Convert data between YAML, TOML, JSON, JSON5, INI, CSV, ES Module, CommonJS
 
 ## Quick Overview
 
@@ -40,29 +40,27 @@ lp --help
 
 ### input
 
-- cjs (CommonJS, file only, not stdin)
-- esm (ESModule, file only, not stdin)
+- yaml (default value for Stdin, `YAML` is superset of `JSON`, so it should work for `JSON` as well)
+- json
 - ini
 - js (CommonJS or ESModule, file only, not stdin)
-- json
 - json5
 - toml
-- yaml (default value for Stdin, `YAML` is superset of `JSON`, so it should work for `JSON` as well)
+- csv
+- esm (ESModule, file only, not stdin)
+- cjs (CommonJS, file only, not stdin)
 
 ### output
 
-- cjs
-- esm
-- ini
 - json (default)
+- yaml
+- ini
 - json5
 - toml
-- yaml
+- csv
+- cjs
+- esm
 
 ## Related
 
 - [left-phalange-api](https://github.com/fisker/left-phalange-api) - API for this module
-
-## License
-
-MIT © [fisker Cheung](https://github.com/fisker)
