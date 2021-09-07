@@ -11,7 +11,7 @@ const dirname = path.join(process.cwd(), 'test')
 const filename = path.join(dirname, 'test.js')
 
 const packageJson = JSON.parse(
-  fs.readFileSync(path.join(dirname, '../package.json'))
+  fs.readFileSync(path.join(dirname, '../package.json')),
 )
 
 execa.commandSync('chmod +x ../lib/cli.js', {
@@ -28,7 +28,7 @@ function run({file, stdin, flags = {}}) {
 
         return [...all, `--${key}`, value]
       },
-      [file]
+      [file],
     )
     .filter(Boolean)
 
