@@ -3,9 +3,9 @@ import path from 'node:path'
 import process from 'node:process'
 import test from 'ava'
 import execa from 'execa'
-import clipboardy from 'clipboardy'
+import clipboard from 'clipboardy'
 
-const {writeSync: writeClipboard, readSync: readClipboard} = clipboardy
+const {writeSync: writeClipboard, readSync: readClipboard} = clipboard
 
 const dirname = path.join(process.cwd(), 'test')
 const filename = path.join(dirname, 'test.js')
