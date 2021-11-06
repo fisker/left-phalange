@@ -67,7 +67,7 @@
     "update-notifier": "5.1.0"
   },
   "devDependencies": {
-    "@fisker/commitlint-config": "2.0.0",
+    "@fisker/commitlint-config": "2.0.1",
     "@fisker/eslint-config": "9.0.3",
     "@fisker/eslint-config-ava": "2.0.4",
     "@fisker/lint-staged-config": "3.1.3",
