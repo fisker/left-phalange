@@ -2,7 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import process from 'node:process'
 import test from 'ava'
-import {commandSync} from 'execa'
+import {execaSync, commandSync} from 'execa'
 import clipboard from 'clipboardy'
 
 const {writeSync: writeClipboard, readSync: readClipboard} = clipboard
@@ -30,7 +30,7 @@ function run({file, stdin, flags = {}}) {
     )
     .filter(Boolean)
 
-  return execa.sync('node', ['../lib/index.js', ...arguments_], {
+  return execaSync('node', ['../lib/index.js', ...arguments_], {
     cwd: dirname,
     input: stdin,
   })
