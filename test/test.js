@@ -2,7 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import process from 'node:process'
 import test from 'ava'
-import {execaSync, commandSync} from 'execa'
+import {execaSync, execaCommandSync} from 'execa'
 import clipboard from 'clipboardy'
 
 const {writeSync: writeClipboard, readSync: readClipboard} = clipboard
@@ -14,7 +14,7 @@ const packageJson = JSON.parse(
   fs.readFileSync(path.join(dirname, '../package.json')),
 )
 
-commandSync('chmod +x ../lib/cli.js', {cwd: dirname})
+execaCommandSync('chmod +x ../lib/cli.js', {cwd: dirname})
 
 function run({file, stdin, flags = {}}) {
   const arguments_ = Object.entries(flags)
