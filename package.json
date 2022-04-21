@@ -71,7 +71,7 @@
     "@fisker/eslint-config": "10.1.4",
     "@fisker/eslint-config-ava": "2.0.5",
     "@fisker/lint-staged-config": "3.1.5",
-    "@fisker/prettier-config": "5.0.5",
+    "@fisker/prettier-config": "5.0.6",
     "ava": "4.2.0",
     "c8": "7.11.0",
     "del-cli": "4.0.1",
