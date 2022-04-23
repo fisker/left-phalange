@@ -17,11 +17,11 @@ npm install --global left-phalange
 ## Usage
 
 ```text
-lp --help
+lph --help
 
   Usage
     left-phalange <file>
-    lp <file>
+    lph <file>
 
   Options
     -i, --input           Input Data type
@@ -32,8 +32,8 @@ lp --help
     -v, --version         Show version
 
   Examples
-    lp data.toml > data.json
-    cat data.yaml | lp -p
+    lph data.toml > data.json
+    cat data.yaml | lph -p
 ```
 
 ## Options
