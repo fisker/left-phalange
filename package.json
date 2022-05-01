@@ -60,7 +60,7 @@
   "dependencies": {
     "ansi-colors": "4.1.1",
     "clipboardy": "3.0.0",
-    "esm-utils": "3.0.0",
+    "esm-utils": "3.1.1",
     "get-stdin": "9.0.0",
     "left-phalange-api": "3.0.0",
     "meow": "10.1.2",
