@@ -64,7 +64,7 @@
     "get-stdin": "9.0.0",
     "left-phalange-api": "3.0.0",
     "meow": "10.1.5",
-    "update-notifier": "5.1.0"
+    "update-notifier": "6.0.2"
   },
   "devDependencies": {
     "@fisker/commitlint-config": "2.0.5",
